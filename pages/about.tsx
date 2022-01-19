@@ -18,7 +18,7 @@ const about: NextPage = () => {
       <Navbar></Navbar>
       <div className="w-100">
         <p className="text-white text-center w-4/6 m-auto">
-          Greetings! I’m Adrián Aranda and I'm a full stack web developer from
+          Greetings! I'm Adrián Aranda and I'm a full stack web developer from
           Barcelona, Spain. I studied electronics and audiovisual production
           but, due to my dynamic profile, I got in charge of account management
           positions, where I gained a deep understanding of fidelity building
