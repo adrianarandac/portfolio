@@ -2,10 +2,12 @@ import React from "react";
 import type { NextPage } from "next";
 import Navbar from "../components/Navbar";
 import Head from "next/head";
+import adrianPhoto from "../public/adrianphoto.jpg";
+import Image from "next/image";
 
 const about: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Adrián Aranda / About</title>
         <meta
@@ -16,37 +18,41 @@ const about: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar></Navbar>
-      <div className="w-100">
-        <p className="text-white text-center w-4/6 m-auto">
-          Greetings! Im Adrián Aranda and I'm a full stack web developer from
-          Barcelona, Spain. I studied electronics and audiovisual production
-          but, due to my dynamic profile, I got in charge of account management
-          positions, where I gained a deep understanding of fidelity building
-          and customer success. At the same time, being deeply in touch with
-          tech departments sparked my interest in coding and, after learning for
-          a few months on my own with free online resources and falling in love
-          with it, I decided to focus on coding and enrol in Ironhack's Full
-          Stack Web Development Bootcamp. Despite the career change, I think I
-          carry with me valuable experience related to teamwork, client
-          management and setting priorities that can deeply benefit any future
-          position. As a person, one of my best skills is being able to see "the
-          bigger picture" and understand how the dynamics of a project or a team
-          are developing. I consider myself empathetic, highly creative and
-          assertive. When it comes to my interests, I'm a self-taught musician
-          (I have my own home studio!) and I love playing chess. Also, ever
-          since I started coding I love to build projects where I can practice
-          my skills as well as learn new ones. Now I'm currently looking for
-          tech companies, where I can develop all the knowledge I've gathered
-          until now and also keep evolving as a professional. I'm confident I'm
-          a strong bet as any company would greatly benefit from a talent that's
-          also packed with a good business vision and background. Because of
-          this, I would really appreciate the opportunity to discuss my
-          application and provide further details of my experience, as well as
-          references if you need them! And of course, feel free to check my
-          portfolio. Thank you for your time, Adrián Aranda
-        </p>
+      <div className="h-screen pt-[18vh]">
+        <div className="flex justify-center items-center">
+          <div className="relative item-detail ">
+            <Image
+              alt="Adrián Aranda photo"
+              src={adrianPhoto}
+              layout={"fill"}
+              objectFit={"contain"}
+            />
+          </div>
+          <div className="flex-column w-2/5">
+            <h3 className="text-white text-[4em] transition ease-in-out hover:opacity-50 duration-700 text-bold">WHO AM I?</h3>
+            <p className="text-white">
+              Greetings! Im Adrián Aranda and I'm a full stack web developer
+              from Barcelona. I studied electronics and audiovisual production
+              but, due to my dynamic profile, throughout my career I've gained
+              experience in multiple positions.
+              <br /> <br /> Despite the career change, I think I carry with me
+              valuable experience related to teamwork, client management and
+              setting priorities that can deeply benefit any future position. As
+              a person, one of my best skills is being able to see "the bigger
+              picture" and understand how the dynamics of a project or a team
+              are developing. I consider myself empathetic, highly creative and
+              assertive. When it comes to my interests, I'm a self-taught
+              musician (I have my own home studio!) and I love playing chess.{" "}
+              <br /> <br /> Also, ever since I started coding I love to build
+              projects where I can practice my skills as well as learn new ones.
+              Now I'm currently looking for tech companies, where I can develop
+              all the knowledge I've gathered until now and also keep evolving
+              as a professional.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

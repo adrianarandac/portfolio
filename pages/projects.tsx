@@ -3,10 +3,17 @@ import Navbar from "../components/Navbar";
 
 const projects = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <h1 className="text-white">so many projects wow</h1>
-    </div>
+      <div className="pt-[40vh]">
+        <ul className="text-white text-center">
+          <h1 className="">my projects are:</h1>
+          <li>seven.</li>
+          <li>Apipie</li>
+          <li>Daimmer</li>
+        </ul>
+      </div>
+    </>
   );
 };
 

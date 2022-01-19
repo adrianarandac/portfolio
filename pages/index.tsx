@@ -18,11 +18,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="flex justify-around items-center">
-        <div className="relative item-detail">
-          <Image alt="Adrián Aranda photo" src={adrianPhoto} layout={"fill"} objectFit={"contain"} />
-        </div>
-        <p className="text-black w-2/5 bg-yellow-300 skew-y-12">WELCOME TO MY NICE SITE ILL TRY TO MAKE IT AS PLEASANT AS POSSIBLE SO YOU HIRE ME OKAY?</p>
+      <div className="flex justify-around pt-[40vh]">
+        <p className="text-black w-2/5 text-center py-4 font-bold bg-yellow-300 skew-y-12">
+          WELCOME TO MY AMAZING WEBSITE YAY
+        </p>
       </div>
     </div>
   );

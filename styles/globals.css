@@ -2,14 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-black m-0 p-0
+html {
+  height: 100vh;
+}
 
+body {
+  @apply bg-black mt-4 p-0;
+}
+
+@layer utilities {
+  .bg-growing-underline {
+    background-size: 100% 0.0em;
+    background-position: 0 88%;
+    @apply bg-no-repeat transition-all duration-200;
+  }
+  .bg-growing-underline:hover {
+    background-size: 100% 100%;
+  }
+  .bg-growing-underline:focus {
+    background-size: 100% 100%;
+  }
 }
 
 .item-detail {
-  width: 20%;
-  height: 45vh;
+  width: 35vw;
+  height: 50vh;
 }
-
-
