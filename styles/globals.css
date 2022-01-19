@@ -3,5 +3,13 @@
 @tailwind utilities;
 
 body {
-  @apply bg-black p-4
+  @apply bg-black m-0 p-0
+
 }
+
+.item-detail {
+  width: 20%;
+  height: 45vh;
+}
+
+
