@@ -16,10 +16,6 @@ const Home: NextPage = () => {
           key="Adrian"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <Navbar />
       <div className="flex justify-around items-center">
