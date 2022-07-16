@@ -134,7 +134,7 @@ export default function Navbar() {
           <span className={`h-1 w-full bg-white rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
           <span className={`h-1 w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-3.5" : ""}`} />
         </div>
-        <div className="w-3/5 flex justify-end gap-10 md:flex">
+        <div className="w-3/5 flex justify-end gap-10 hidden md:flex">
           <Link href="/about">
             <a className="text-white whitespace-nowrap transition ease-in-out hover:-translate-y-1 active:scale-110 active:text-zinc-900 active:skew-y-6 duration-400">
               About Me
