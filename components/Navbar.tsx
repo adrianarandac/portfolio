@@ -1,4 +1,3 @@
-
 import React from "react";
 import Link from "next/link";
 import { useState } from "react";
@@ -6,16 +5,16 @@ import { useState } from "react";
 function MobileNav({ open, setOpen }: any) {
   return (
     <div
-      className={`absolute top-0 left-0 h-screen w-screen bg-black transform ${
+      className={`absolute top-0 left-0 z-10 h-screen w-screen bg-black transform ${
         open ? "-translate-x-0" : "-translate-x-full"
-      } transition-transform duration-300 ease-in-out filter drop-shadow-md px-4`}
+      } transition-transform duration-300 ease-in-out filter drop-shadow-md`}
     >
-      <div className="text-white text-3xl font-vietnam inline-block bg-gradient-to-r hover:-translate-y-1.5 from-yellow-50 to-yellow-100 bg-growing-underline hover:text-black">
+      <div className="text-white text-3xl font-vietnam  bg-gradient-to-r hover:-translate-y-1.5 from-yellow-50 to-yellow-100 bg-growing-underline hover:text-black flex items-center justify-center filter drop-shadow-md  h-20">
         <Link href="/">
           <a> MENU</a>
         </Link>
       </div>
-      <div className="flex flex-col ml-4">
+      <div className="flex flex-col bg-black pl-4">
         <Link href="/about">
           <a
             className=" text-white my-4"
@@ -60,11 +59,14 @@ function MobileNav({ open, setOpen }: any) {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="flex filter drop-shadow-md bg-black px-9 py-4 h-20 items-center">
+    <nav className="flex filter drop-shadow-md bg-black items-center">
       <MobileNav open={open} setOpen={setOpen} />
-      <div className="w-fit">
+      <div>
         <Link href="/">
-          <a className="text-white text-3xl font-vietnam inline-block bg-gradient-to-r hover:-translate-y-1.5 from-yellow-50 to-yellow-100 bg-growing-underline hover:text-black"> ADRIAN ARANDA</a>
+          <a className="text-white text-xl sm:text-3xl whitespace-nowrap font-vietnam inline-block bg-gradient-to-r hover:-translate-y-1.5 from-yellow-50 to-yellow-100 bg-growing-underline hover:text-black">
+            {" "}
+            ADRIAN ARANDA
+          </a>
         </Link>
       </div>
       <div className="w-9/12 flex justify-end items-center">
@@ -79,7 +81,7 @@ export default function Navbar() {
           <span className={`h-1 w-full bg-white rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
           <span className={`h-1 w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-3.5" : ""}`} />
         </div>
-        <div className="w-3/5 flex justify-end gap-10 hidden md:flex">
+        <div className="flex gap-10 hidden md:flex">
           <Link href="/about">
             <a className="text-white whitespace-nowrap transition ease-in-out hover:-translate-y-1 active:scale-110 active:text-zinc-900 active:skew-y-6 duration-400">
               About Me

@@ -9,15 +9,15 @@ const projects = () => {
   return (
     <>
       <Navbar />
-      <div className="h-screen pt-[16vh] flex-column projects">
-        <div className="grid justify-items-center">
-          <div className="w-4/6 sm:w-100 tile flex items-center mb-36 bg-grey-800">
-            <div className="relative hidden lg:visible item-detail">
-              <Image alt="Adrián Aranda photo" src={seven1} layout={"fill"} objectFit={"contain"} />
+      <div className="h-screen pt-[12vh] flex-column projects items-center">
+        <div className="flex flex-col items-center">
+          <div className="w-11/12 tile flex items-center mb-16 sm:w-5/6">
+            <div className="relative hidden sm:block item-detail">
+              <Image alt="seven-1" src={seven1} layout={"fill"} objectFit={"contain"} />
             </div>
 
-            <div className="flex-col w-4/6">
-              <h3 className=" text-white text-[3.5em] transition ease-in-out duration-1000 hover:text-fuchsia-300 w-auto inline-block bg-gradient-to-r hover:-translate-y-1">
+            <div className="flex-col sm:w-3/5">
+              <h3 className="text-white text-[3.5em] transition ease-in-out duration-1000 hover:text-fuchsia-300 w-auto inline-block bg-gradient-to-r hover:-translate-y-1">
                 <strong>SEVEN.</strong>
               </h3>
               <p className="text-white text-justify pb-4">
@@ -61,8 +61,8 @@ const projects = () => {
             </div>
           </div>
           {"different"}
-          <div className="w-4/6 tile flex items-center mb-36 bg-grey-800">
-            <div className="flex-col w-4/6">
+          <div className="w-11/12 tile flex items-center mb-16 sm:w-5/6">
+          <div className="flex-col sm:w-3/5">
               <h3 className="text-white text-[3.5em] transition ease-in-out duration-1000 hover:text-green-500 w-auto inline-block bg-gradient-to-r hover:-translate-y-1">
                 <strong>Apipie</strong>
               </h3>
@@ -96,7 +96,7 @@ const projects = () => {
               </div>
             </div>
 
-            <div className="relative item-detail ">
+            <div className="relative hidden sm:block item-detail">
               <Image alt="Adrián Aranda photo" src={apipie1} layout={"fill"} objectFit={"contain"} />
             </div>
           </div>

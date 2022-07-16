@@ -14,14 +14,14 @@ const about: NextPage = () => {
       <Navbar></Navbar>
       <div className=" projects">
         <div className="flex justify-center items-center">
-          <div className="flex-column lg:w-2/5 sm:w-4/5">
-            <h3 className="text-white text-[3.5em] transition ease-in-out duration-1000 hover:text-red-400 w-auto inline-block bg-gradient-to-r hover:-translate-y-1">
+          <div className="flex-column w-11/12 sm:w-2/4">
+            <h3 className="text-white pt-2 text-[3em] sm:text-[3.5em] transition ease-in-out duration-1000 hover:text-red-400 w-auto inline-block bg-gradient-to-r hover:-translate-y-1">
               <strong>Hello there!</strong>
             </h3>
             <p className="text-white text-justify">
               <br />
-              👋 Thanks for passing by! I'm Adrian Aranda, a software engineer based in Barcelona with a background in sound engineering and audiovisual/digital
-              media. I'm currently part of Bolt's engineering team.
+              👋 Thanks for passing by! I'm Adrian Aranda, a software engineer from Barcelona with a background in sound engineering and audiovisual/digital
+              media. I'm currently part of <a href="https://www.bolt.com" className="text-indigo-300 animation-pulse transition ease-in-out duration-1000 hover:text-blue-600	">Bolt</a>'s engineering team.
               <br />
               <br />
               🙇🏻 My colleagues would say I am an social and creative engineer with great skills to see the big picture. I value innovative thinking, clear goals

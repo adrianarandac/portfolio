@@ -18,11 +18,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="flex justify-around pt-[40vh]">
-        <p className="text-black w-2/5 text-center py-4 font-bold bg-yellow-300 skew-y-12">
-          WELCOME TO MY AMAZING WEBSITE YAY
-        </p>
-      </div>
+
     </div>
   );
 };
