@@ -7,17 +7,17 @@ function MobileNav({ open, setOpen }: any) {
     <div
       className={`absolute top-0 left-0 z-10 h-screen w-screen bg-black transform ${
         open ? "-translate-x-0" : "-translate-x-full"
-      } transition-transform duration-300 ease-in-out filter drop-shadow-md`}
+      } transition-transform duration-200 ease-in-out filter drop-shadow-md`}
     >
-      <div className="text-white text-3xl font-vietnam  bg-gradient-to-r hover:-translate-y-1.5 from-yellow-50 to-yellow-100 bg-growing-underline hover:text-black flex items-center justify-center filter drop-shadow-md  h-20">
+      <div className="text-white text-3xl font-vietnam  bg-gradient-to-r hover:-translate-y-1 from-yellow-50 to-yellow-100 bg-growing-underline hover:text-black flex items-center justify-center filter drop-shadow-md h-20">
         <Link href="/">
-          <a> MENU</a>
+          <a>MENU</a>
         </Link>
       </div>
-      <div className="flex flex-col bg-black pl-4">
+      <div className="flex flex-col bg-gray-900 pl-4">
         <Link href="/about">
           <a
-            className=" text-white my-4"
+            className=" text-white my-4 text-lg"
             onClick={() =>
               setTimeout(() => {
                 setOpen(!open);
@@ -29,7 +29,7 @@ function MobileNav({ open, setOpen }: any) {
         </Link>
         <Link href="/projects">
           <a
-            className=" text-white my-4"
+            className=" text-white my-4 text-lg"
             onClick={() =>
               setTimeout(() => {
                 setOpen(!open);
@@ -41,7 +41,7 @@ function MobileNav({ open, setOpen }: any) {
         </Link>
         <Link href="/resume">
           <a
-            className=" text-white font-medium my-4"
+            className=" text-white my-4 text-lg"
             onClick={() =>
               setTimeout(() => {
                 setOpen(!open);
@@ -59,7 +59,7 @@ function MobileNav({ open, setOpen }: any) {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="flex filter drop-shadow-md bg-black items-center">
+    <nav className="flex filter drop-shadow-md bg-black items-center justify-between px-2">
       <MobileNav open={open} setOpen={setOpen} />
       <div>
         <Link href="/">
@@ -69,17 +69,17 @@ export default function Navbar() {
           </a>
         </Link>
       </div>
-      <div className="w-9/12 flex justify-end items-center">
+      <div className="flex justify-end items-center">
         <div
-          className="z-50 flex relative w-8 h-8 flex-col justify-between items-center md:hidden"
+          className="z-50 flex relative w-7 h-7 flex-col justify-between items-center md:hidden"
           onClick={() => {
             setOpen(!open);
           }}
         >
           {/* hamburger button */}
-          <span className={`h-1 w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? "rotate-45 translate-y-3.5" : ""}`} />
+          <span className={`h-1 w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? "rotate-45 translate-y-3" : ""}`} />
           <span className={`h-1 w-full bg-white rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
-          <span className={`h-1 w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-3.5" : ""}`} />
+          <span className={`h-1 w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-3" : ""}`} />
         </div>
         <div className="flex gap-10 hidden md:flex">
           <Link href="/about">
