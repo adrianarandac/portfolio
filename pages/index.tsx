@@ -1,11 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import adrianPhoto from "../public/adrianphoto.jpg";
+import shelby from "../public/shelby.png";
 import Navbar from "../components/Navbar";
+import { useState } from "react";
 
 const Home: NextPage = () => {
+  const [count, setCount] = useState(0);
+  const increment = () => {
+    setCount(count + 420)
+  }
+
   return (
     <div>
       <Head>
@@ -18,7 +24,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+      <div className="flex h-screen text-white text-center">
+  <div className="m-auto">
+    <h1>YOUR BANK ACCOUNT:<br />{count} dolas</h1>
+    <button onClick={increment} className="bg-yellow-500 hover:bg-yellow-300 text-white font-bold py-2 px-4 border border-green-700 rounded">GET SOME FREE CASH MY DUDE😎</button>
 
+  </div>
+</div>
     </div>
   );
 };

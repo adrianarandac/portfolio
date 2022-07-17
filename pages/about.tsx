@@ -12,7 +12,7 @@ const about: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar></Navbar>
-      <div className=" projects">
+      <div className="pt-[3vh] sm:pt-[10vh] projects">
         <div className="flex justify-center items-center">
           <div className="flex-column w-11/12 sm:w-2/4">
             <h3 className="text-white pt-2 text-[3em] sm:text-[3.5em] transition ease-in-out duration-1000 hover:text-red-400 w-auto inline-block bg-gradient-to-r hover:-translate-y-1">
