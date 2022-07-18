@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import adrianPhoto from "../public/adrianphoto.jpg";
-import shelby from "../public/shelby.png";
 import Navbar from "../components/Navbar";
 import { useState } from "react";
 

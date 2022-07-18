@@ -5,19 +5,19 @@ import { useState } from "react";
 function MobileNav({ open, setOpen }: any) {
   return (
     <div
-      className={`absolute top-0 left-0 z-10 h-screen w-screen bg-black transform ${
-        open ? "-translate-x-0" : "-translate-x-full"
-      } transition-transform duration-200 ease-in-out filter drop-shadow-md`}
+      className={`absolute z-50 top-0 h-fit pb-5 left-0 w-screen bg-black transform ${
+        open ? "-translate-y-0" : "-translate-y-full"
+      } transition-transform duration-300 ease-in-out filter drop-shadow-md`}
     >
-      <div className="text-white text-3xl font-vietnam  bg-gradient-to-r hover:-translate-y-1 from-yellow-50 to-yellow-100 bg-growing-underline hover:text-black flex items-center justify-center filter drop-shadow-md h-20">
+      <div className="text-white font-vietnam text-2xl bg-growing-underline flex items-center justify-center filter drop-shadow-md h-20">
         <Link href="/">
           <a>MENU</a>
         </Link>
       </div>
-      <div className="flex flex-col bg-gray-900 pl-4">
+      <div className="flex flex-col bg-black gap-7 pl-4">
         <Link href="/about">
           <a
-            className=" text-white my-4 text-lg"
+            className=" text-white text-lg"
             onClick={() =>
               setTimeout(() => {
                 setOpen(!open);
@@ -29,7 +29,7 @@ function MobileNav({ open, setOpen }: any) {
         </Link>
         <Link href="/projects">
           <a
-            className=" text-white my-4 text-lg"
+            className=" text-white text-lg"
             onClick={() =>
               setTimeout(() => {
                 setOpen(!open);
@@ -41,7 +41,7 @@ function MobileNav({ open, setOpen }: any) {
         </Link>
         <Link href="/resume">
           <a
-            className=" text-white my-4 text-lg"
+            className=" text-white text-lg pb-3"
             onClick={() =>
               setTimeout(() => {
                 setOpen(!open);
@@ -59,12 +59,11 @@ function MobileNav({ open, setOpen }: any) {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="flex filter drop-shadow-md bg-black items-center justify-between px-3 sm:px-10">
+    <nav className="flex fixed w-screen z-10 align-middle filter drop-shadow-md bg-black items-center justify-between h-16 px-5 sm:px-10">
       <MobileNav open={open} setOpen={setOpen} />
       <div>
         <Link href="/">
-          <a className="text-white text-xl sm:text-3xl whitespace-nowrap font-vietnam inline-block bg-gradient-to-r hover:-translate-y-1.5 from-yellow-50 to-yellow-100 bg-growing-underline hover:text-black">
-            {" "}
+          <a className="text-white font-vietnam text-xl sm:text-3xl whitespace-nowrap inline-block bg-gradient-to-r hover:-translate-y-1.5 from-yellow-50 to-yellow-100 bg-growing-underline hover:text-black">
             ADRIAN ARANDA
           </a>
         </Link>
@@ -81,7 +80,7 @@ export default function Navbar() {
           <span className={`h-1 w-full bg-white rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
           <span className={`h-1 w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-3" : ""}`} />
         </div>
-        <div className="flex gap-10 hidden md:flex">
+        <div className="gap-10 hidden md:flex">
           <Link href="/about">
             <a className="text-white whitespace-nowrap transition ease-in-out hover:-translate-y-1 active:scale-110 active:text-zinc-900 active:skew-y-6 duration-400">
               About Me
