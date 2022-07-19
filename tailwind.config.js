@@ -20,6 +20,33 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
+      keyframes: {
+        "fade-in-down": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-25px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        "fade-in": {
+          "0%": {
+            opacity: "0",
+          },
+          "25%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
+      },
+      animation: {
+        "fade-in-down": "fade-in-down 3s ease-in-out",
+        "fade-in": "fade-in 3s ease-in-out",
+      },
       fontFamily: {
         vietnam: ['"Be Vietnam Pro"'],
         cormorant: ['"Cormorant SC"'],

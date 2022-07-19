@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'bogart';
-  src: local('Bogart Medium'), url(./fonts/Bogart-Medium-trial.ttf) format('ttf');
+  font-family: "bogart";
+  src: local("Bogart Medium"), url(./fonts/Bogart-Medium-trial.ttf) format("ttf");
 }
+
 
 body {
   @apply bg-black mt-4 p-0 font-montserrat;
