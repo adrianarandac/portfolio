@@ -42,10 +42,22 @@ module.exports = {
             opacity: "1",
           },
         },
+        "fade-in-btn": {
+          "0%": {
+            opacity: "0",
+          },
+          "60%": {
+            opacity: "0.3",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
       },
       animation: {
         "fade-in-down": "fade-in-down 3s ease-in-out",
         "fade-in": "fade-in 3s ease-in-out",
+        "fade-in-btn": "fade-in-btn 4s ease-in-out",
       },
       fontFamily: {
         vietnam: ['"Be Vietnam Pro"'],
