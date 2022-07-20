@@ -64,6 +64,7 @@ module.exports = {
         cormorant: ['"Cormorant SC"'],
         montserrat: ['"Montserrat"'],
         ibarra: ['"Ibarra Real Nova"'],
+        roboto: ['"Roboto"'],
       },
       bgGradientDeg: {
         75: "75deg",

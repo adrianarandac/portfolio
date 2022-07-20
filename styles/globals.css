@@ -9,7 +9,7 @@
 
 
 body {
-  @apply bg-black mt-4 p-0 font-montserrat;
+  @apply bg-black mt-4 font-roboto;
   margin: 0;
   padding: 0;
 }

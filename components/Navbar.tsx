@@ -39,7 +39,7 @@ function MobileNav({ open, setOpen }: any) {
             Projects
           </a>
         </Link>
-        <Link href="/resume">
+        <Link href="/contact">
           <a
             className=" text-white text-lg pb-3"
             onClick={() =>
@@ -48,7 +48,7 @@ function MobileNav({ open, setOpen }: any) {
               }, 100)
             }
           >
-            CV
+            Contact
           </a>
         </Link>
       </div>
@@ -91,9 +91,9 @@ export default function Navbar() {
               Projects
             </a>
           </Link>
-          <Link href="/resume">
+          <Link href="/contact">
             <a className="text-white whitespace-nowrap transition ease-in-out hover:-translate-y-1 active:scale-110 active:text-zinc-900 active:skew-y-6 duration-400">
-              CV
+              Contact
             </a>
           </Link>
         </div>
