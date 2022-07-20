@@ -5,7 +5,14 @@ import Navbar from "../components/Navbar";
 function ContactForm() {
   const [state, handleSubmit] = useForm("xdobqgyl");
   if (state.succeeded) {
-    return <p>Thanks for contacting me. I'll reply ASAP!</p>;
+    return (
+      <div className="h-full rounded-xl p-10 bg-green-500 text-white font-vietnam text-lg text-center m-auto">
+        <p>
+          Thanks a lot for contacting me!
+          <br /> I promise I'll try to reply asap!
+        </p>
+      </div>
+    );
   }
   return (
     <form onSubmit={handleSubmit} className="w-full max-h-max rounded-xl p-10 bg-gray-200 text-white">
@@ -67,8 +74,8 @@ function Contact() {
   return (
     <>
       <Navbar />
-      <div className="flex h-screen pt-24 from-red-300 bg-red-700 bg-gradient-120">
-        <div className="w-[80vw] sm:w-[60vw] animate-fade-in-down sm:flex rounded-xl bg-red-700 shadow-2xl text-white m-auto">
+      <div className="flex h-[120vh] sm:h-screen pt-20  from-green-200 bg-green-600 bg-gradient-120">
+        <div className="w-[80vw] sm:w-[60vw] animate-fade-in-down sm:flex rounded-xl bg-indigo-700 shadow-2xl text-white m-auto">
           <div className="m-5">
             <p className="text-4xl font-vietnam mb-5">
               Questions?
