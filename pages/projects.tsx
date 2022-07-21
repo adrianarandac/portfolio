@@ -220,7 +220,7 @@ const Projects = () => {
               <h3 className="text-black text-[3.5em] font-vietnam transition ease-in-out duration-1000  w-auto inline-block hover:-translate-y-1">
                 <strong>Daimmer</strong>
               </h3>
-              <p className="text-black text-lg lg:text-[1.1em] font-bold sm:w-11/12 mb-8 text-justify m-auto">
+              <p className="text-black text-lg lg:text-[1.1em] font-bold sm:w-11/12 mb-8 lg:pr-20 text-justify m-auto">
                 <br />
                 Daimmer was my first project ever!
                 <br /> <br /> This is an addictive eye-hand coordination game where you have to press the letter displayed in the black tiles while hovering

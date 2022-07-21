@@ -5,6 +5,7 @@ import Head from "next/head";
 import Image from "next/image";
 import adrian2 from "../public/adrian3.png";
 import Music from "../components/Music";
+import Movies from "../components/Movies";
 
 
 const About: NextPage = () => {
@@ -65,6 +66,7 @@ const About: NextPage = () => {
         </div>
       </div>
       <Music />
+      <Movies />
     </>
   );
 };
