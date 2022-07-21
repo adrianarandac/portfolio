@@ -8,9 +8,9 @@ import revolver from "../public/albums/revolver.jpeg";
 function Music() {
   return (
     <div className="py-20 lg:py-36 bg-teal-400">
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col justify-center sm:px-20">
         <div>
-          <h3 className="font-vietnam text-4xl text-center pb-14">THREE ALBUMS:</h3>
+          <h3 className="font-vietnam text-4xl text-center sm:text-left pb-14">THREE ALBUMS:</h3>
         </div>
 
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 sm:gap-20">
@@ -24,7 +24,7 @@ function Music() {
             <p className="italic">by Frank Ocean</p>
           </div>
           <div className=" text-right">
-          <Link href="https://www.youtube.com/watch?v=UTH1VNHLjng&list=PL8YH4mOwWryUMna911yJM2B52iIIzigKy">
+            <Link href="https://www.youtube.com/watch?v=UTH1VNHLjng&list=PL8YH4mOwWryUMna911yJM2B52iIIzigKy">
               <a target="_blank">
                 <Image alt="seven-1" src={mbdtf} objectFit={"contain"} width={350} height={350} className="rounded-lg" />
               </a>
@@ -33,7 +33,7 @@ function Music() {
             <p className="italic">by Kanye West</p>
           </div>
           <div className=" text-right">
-          <Link href="https://www.youtube.com/watch?v=l0zaebtU-CA&list=PLg5pp7nrH0IqV2ESEZmmgWtECbzkS8d3O">
+            <Link href="https://www.youtube.com/watch?v=l0zaebtU-CA&list=PLg5pp7nrH0IqV2ESEZmmgWtECbzkS8d3O">
               <a target="_blank">
                 <Image alt="seven-1" src={revolver} objectFit={"contain"} width={350} height={350} className="rounded-lg" />
               </a>
