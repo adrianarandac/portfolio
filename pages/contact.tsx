@@ -75,7 +75,7 @@ function Contact() {
     <>
       <Navbar />
       <div className="flex h-[120vh] sm:h-screen pt-20  from-green-200 bg-green-600 bg-gradient-120">
-        <div className="w-[80vw] sm:w-[60vw] animate-fade-in-down sm:flex rounded-xl bg-indigo-700 shadow-2xl text-white m-auto">
+        <div className="w-[80vw] sm:w-[60vw] animate-[fade-in-down_1s_ease-in-out] sm:flex rounded-xl bg-indigo-700 shadow-2xl text-white m-auto">
           <div className="m-5">
             <p className="text-4xl font-vietnam mb-5">
               Questions?

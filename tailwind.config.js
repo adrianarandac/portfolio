@@ -55,9 +55,9 @@ module.exports = {
         },
       },
       animation: {
-        "fade-in-down": "fade-in-down 3s ease-in-out",
-        "fade-in": "fade-in 3s ease-in-out",
-        "fade-in-btn": "fade-in-btn 4s ease-in-out",
+        "fade-in-down": "fade-in-down 2s ease-in-out",
+        "fade-in": "fade-in 2s ease-in-out",
+        "fade-in-btn": "fade-in-btn 3s ease-in-out",
       },
       fontFamily: {
         vietnam: ['"Be Vietnam Pro"'],
