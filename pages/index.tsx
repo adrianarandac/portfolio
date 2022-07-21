@@ -30,7 +30,7 @@ const Home: NextPage = () => {
             A Software Engineer.
             <br />
           </h1>
-          <p className="font-montserrat text-sm sm:text-lg animate-fade-in mb-7">
+          <p className="font-lato text-sm sm:text-xl animate-fade-in mb-7">
             First of all, thank you for passing by!
             <br />
             Now, what would you like to know more about,

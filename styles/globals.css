@@ -2,16 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "bogart";
-  src: local("Bogart Medium"), url(./fonts/Bogart-Medium-trial.ttf) format("ttf");
-}
-
 
 body {
   @apply bg-black mt-4 font-roboto;
   margin: 0;
   padding: 0;
+  font-family: "lato"
 }
 
 .projects {

@@ -62,7 +62,7 @@ module.exports = {
       fontFamily: {
         vietnam: ['"Be Vietnam Pro"'],
         cormorant: ['"Cormorant SC"'],
-        montserrat: ['"Montserrat"'],
+        lato: ['"Lato"'],
         ibarra: ['"Ibarra Real Nova"'],
         roboto: ['"Roboto"'],
       },

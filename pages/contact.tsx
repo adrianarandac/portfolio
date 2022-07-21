@@ -15,7 +15,7 @@ function ContactForm() {
     );
   }
   return (
-    <form onSubmit={handleSubmit} className="w-full max-h-max rounded-xl p-10 bg-gray-200 text-white">
+    <form onSubmit={handleSubmit} className="w-full rounded-xl p-10 bg-gray-200 text-white">
       <fieldset id="fs-frm-inputs" className="flex flex-col align-center">
         <div className="mb-4">
           <label className="block text-black text-sm font-bold mb-2" htmlFor="full-name">

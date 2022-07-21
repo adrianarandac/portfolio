@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 import Head from "next/head";
 import Image from "next/image";
 import adrian2 from "../public/adrian3.png";
+import Music from "../components/Music";
+
 
 const About: NextPage = () => {
   return (
@@ -15,7 +17,7 @@ const About: NextPage = () => {
       </Head>
       <Navbar />
 
-      <div className="p-4 pt-20 lg:pt-[20vh] projects pb-10">
+      <div className="p-4 mb-10 sm:mb-24 pt-20 lg:pt-[20vh] projects pb-10">
         <div className="flex-col lg:flex lg:flex-row px-2 lg:px-24 justify-center items-center align-middle">
           <div className="p-2 mb-6 lg:hidden">
             <Image alt="adrian aranda" src={adrian2} className="rounded-3xl" />
@@ -37,7 +39,7 @@ const About: NextPage = () => {
                 on their backend in sunny Barcelona, Spain.
               </strong>
             </h3>
-            <p className="text-white font-montserrat text-lg lg:text-[1em] ">
+            <p className="text-white font-lato text-lg lg:text-[1em] ">
               <br />
               🙇🏻 I have a social and creative nature and good skills to see the big picture. I value innovative thinking, focus and the chance to get involved,
               as I am a proactive person and I enjoy sharing ideas.
@@ -62,6 +64,7 @@ const About: NextPage = () => {
           </div>
         </div>
       </div>
+      <Music />
     </>
   );
 };
