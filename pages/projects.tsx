@@ -128,7 +128,7 @@ const Projects = () => {
               </button>
             </div>
           </div>
-          <div className="w-screen pb-5 pt-9 sm:h-[95vh] px-4 from-pink-300  bg-pink-500 bg-gradient-120 tile flex-column items-center align-middle sm:flex">
+          <div className="w-screen pb-5 pt-9 sm:h-[90vh] px-4 from-pink-300  bg-pink-500 bg-gradient-120 tile flex-column items-center align-middle sm:flex">
             <div className="flex-col sm:w-3/5 sm:pl-40 ">
               <h3 className="text-white text-[3.5em] font-vietnam transition ease-in-out duration-1000 w-auto inline-block  hover:-translate-y-1">
                 <strong>Apipie</strong>

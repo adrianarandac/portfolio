@@ -1,6 +1,11 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import Navbar from "../components/Navbar";
+import linkedIn from "../public/logos/linkedin.png";
+import github from "../public/logos/github.png";
+import Image from "next/image";
+import Link from "next/link";
+
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xdobqgyl");
@@ -74,9 +79,10 @@ function Contact() {
   return (
     <>
       <Navbar />
-      <div className="flex h-[120vh] sm:h-screen pt-20  from-green-200 bg-green-600 bg-gradient-120">
+      <div className="flex h-[125vh] sm:h-screen pt-20  from-green-200 bg-green-600 bg-gradient-120">
         <div className="w-[80vw] sm:w-[60vw] animate-[fade-in-down_1s_ease-in-out] sm:flex rounded-xl bg-indigo-700 shadow-2xl text-white m-auto">
-          <div className="m-5">
+          <div className="m-5 flex flex-col justify-between gap-9">
+            <div>
             <p className="text-4xl font-vietnam mb-5">
               Questions?
               <br />
@@ -87,6 +93,19 @@ function Contact() {
             <p>
               Also, I'm aware that you might hate forms (because, who doesn't?), so please, feel free to contact me at <u>adrienaranda@gmail.com</u>!
             </p>
+            </div>
+            <div className="flex justify-end gap-4 sm:gap-5">
+            <Link href="https://www.youtube.com/watch?v=UTH1VNHLjng&list=PL8YH4mOwWryUMna911yJM2B52iIIzigKy">
+              <a target="_blank">
+                <Image alt="seven-1" src={linkedIn} objectFit={"contain"} width={30} height={30} className="rounded-lg" />
+              </a>
+            </Link>
+            <Link href="https://www.youtube.com/watch?v=UTH1VNHLjng&list=PL8YH4mOwWryUMna911yJM2B52iIIzigKy">
+              <a target="_blank">
+                <Image alt="seven-1" src={github} objectFit={"contain"} width={30} height={30} className="rounded-lg" />
+              </a>
+            </Link>
+            </div>
           </div>
           <ContactForm />
         </div>
