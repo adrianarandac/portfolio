@@ -17,7 +17,7 @@ function Movies() {
           <div className="text-left">
             <Link href="https://www.youtube.com/watch?v=eogpIG53Cis">
               <a target="_blank">
-                <Image alt="seven-1" src={bladeRunner} objectFit={"contain"} width={350} height={420} className="rounded-lg" />
+                <Image alt="seven-1" src={bladeRunner} objectFit={"contain"} width={280} height={415} className="rounded-xl" />
               </a>
             </Link>
             <h4 className="font-vietnam text-center text-lg pt-2">"Blade Runner"</h4>
@@ -25,15 +25,15 @@ function Movies() {
           <div className=" text-left">
             <Link href="https://www.youtube.com/watch?v=oR_e9y-bka0">
               <a target="_blank">
-                <Image alt="seven-1" src={spaceOddity} objectFit={"contain"} width={300} height={420} className="rounded-lg" />
+                <Image alt="seven-1" src={spaceOddity} objectFit={"contain"} width={310} height={415} className="rounded-xl" />
               </a>
             </Link>
             <h4 className="font-vietnam text-center text-lg pt-2">"2001: A Space Odyssey"</h4>
           </div>
-          <div className=" text-left">
+          <div className="text-left ">
             <Link href="https://www.youtube.com/watch?v=dlnmQbPGuls">
               <a target="_blank">
-                <Image alt="seven-1" src={trumanShow} objectFit={"contain"} width={300} height={420} className="rounded-lg" />
+                <Image alt="seven-1" src={trumanShow} objectFit={"contain"} width={280} height={415} className="rounded-xl" />
               </a>
             </Link>
             <h4 className="font-vietnam text-center text-lg pt-2">"The Truman Show"</h4>
