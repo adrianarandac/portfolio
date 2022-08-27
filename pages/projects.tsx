@@ -42,7 +42,7 @@ const Projects = () => {
       <Navbar />
       <div className="h-screen pb-12 sm:pt-5 bg-white sm:pb-34 projects">
         <div className="flex flex-col items-center">
-          <div className="pt-24 pb-16 sm:pb-24 sm:h-[95vh] px-3 from-indigo-300 bg-blue-700 bg-gradient-120 tile flex-column items-center align-middle sm:flex">
+          <div className="w-screen pt-24 pb-16 sm:pb-24 sm:h-[95vh] px-3 from-indigo-300 bg-blue-700 bg-gradient-120 tile flex-column items-center align-middle sm:flex">
             <div className="hidden sm:w-5/12 sm:flex justify-center animate-[fade-in_2s_ease-in-out]">
               <button onClick={decreaseSeven}>O</button>
 
