@@ -18,7 +18,7 @@ const About: NextPage = () => {
       </Head>
       <Navbar />
 
-      <div className="p-4 mb-10 sm:mb-24 pt-20 lg:pt-[20vh] projects pb-10">
+      <div className="p-4 mb-10 sm:mb-24 pt-20 lg:pt-[20vh] 2xl:px-72 2xl:mb-[20vh] projects pb-10">
         <div className="flex-col lg:flex lg:flex-row px-2 lg:px-24 justify-center items-center align-middle">
           <div className="p-2 mb-6 lg:hidden">
             <Image alt="adrian aranda" src={adrian2} className="rounded-3xl" />
@@ -28,10 +28,10 @@ const About: NextPage = () => {
           </div>
 
           <div className="flex-column  lg:w-6/12 lg:px-4 lg:pr-4 m-auto ">
-            <h3 className="text-white text-4xl font-ibarra mb-4 lg:text-[2.5em] leading-snug text-justified w-auto inline-block">
+            <h3 className="text-white text-4xl font-ibarra mb-4 lg:text-[2.5em] 2xl:text-[4.3em] leading-snug text-justified w-auto inline-block">
               <strong>I’m Adrian, a Software Engineer working remotely from sunny Barcelona, Spain.</strong>
             </h3>
-            <p className="text-white font-lato text-lg lg:text-[1em] ">
+            <p className="text-white font-lato text-lg lg:text-[1em] 2xl:text-[1.3em]">
               <br />
               🙇🏻 I have a social and creative nature and good skills to see the big picture. I value innovative thinking, focus and the chance to get involved,
               as I am a proactive person and I enjoy sharing ideas. I last worked for{" "}
