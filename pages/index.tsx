@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Adrian Aranda's Portfolio</title>
+        <title>Adrian Aranda - Portfolio</title>
         <meta
           name="description"
           content="This is the portfolio of the barcelona-based developer Adrián Aranda. Find here the portfolio of this software engineer in Barcelona."

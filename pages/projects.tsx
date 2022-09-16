@@ -40,7 +40,7 @@ const Projects = () => {
   return (
     <>
       <Head>
-        <title>Adrian Aranda's Projects and Portfolio</title>
+        <title>Adrian Aranda - Portfolio</title>
         <meta
           name="description"
           content="Apipie, Daimmer and SEVEN are the full-stack projects built by the software engineer Adrián Aranda."
