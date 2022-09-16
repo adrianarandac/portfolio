@@ -12,9 +12,9 @@ const About: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Adrián Aranda / About</title>
-        <meta name="description" content="Adrian Aranda's Portfolio" key="Adrian" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Adrián Aranda - About Page</title>
+        <meta name="description" content="I’m Adrián Aranda, a software engineer from Barcelona, Spain. Learn more about me and my tech stack!" key="Software engineer in Barcelona" />
+        <link rel="icon" href="/public/favicon.ico" />
       </Head>
       <Navbar />
 
@@ -29,7 +29,7 @@ const About: NextPage = () => {
 
           <div className="flex-column  lg:w-6/12 lg:px-4 lg:pr-4 m-auto ">
             <h3 className="text-white text-4xl font-ibarra mb-4 lg:text-[2.5em] 2xl:text-[4.3em] leading-snug text-justified w-auto inline-block">
-              <strong>I’m Adrian, a Software Engineer working remotely from sunny Barcelona, Spain.</strong>
+              <strong>I’m Adrián, a Software Engineer working remotely from sunny Barcelona, Spain.</strong>
             </h3>
             <p className="text-white font-lato text-lg lg:text-[1em] 2xl:text-[1.3em]">
               <br />

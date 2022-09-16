@@ -13,9 +13,13 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Adrian Aranda</title>
-        <meta name="description" content="Adrian Aranda's Portfolio" key="Adrian" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Adrian Aranda's Portfolio</title>
+        <meta
+          name="description"
+          content="This is the portfolio of the barcelona-based developer Adrián Aranda. Find here the portfolio of this software engineer in Barcelona."
+          key="Software Engineer in Barcelona"
+        />
+        <link rel="icon" href="/public/favicon.ico" />
       </Head>
       {/* <Navbar /> */}
 

@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 import sevenpng from "../public/sevenpng.png";
 import sevenpng2 from "../public/sevenpng2.png";
 import sevenpng3 from "../public/sevenpng3.png";
@@ -38,7 +39,15 @@ const Projects = () => {
   };
   return (
     <>
-      {" "}
+      <Head>
+        <title>Adrian Aranda's Projects and Portfolio</title>
+        <meta
+          name="description"
+          content="Apipie, Daimmer and SEVEN are the full-stack projects built by the software engineer Adrián Aranda."
+          key="Software Engineer in Barcelona"
+        />
+        <link rel="icon" href="/public/favicon.ico" />
+      </Head>{" "}
       <Navbar />
       <div className="h-screen pb-12 sm:pt-5 bg-white sm:pb-34 projects">
         <div className="flex flex-col items-center">
@@ -72,9 +81,7 @@ const Projects = () => {
                 <span className="bg-green-100 text-green-800 border border-green-800 mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
                   Tailwind
                 </span>
-                <span className="bg-pink-100 text-pink-800 mr-2 px-2.5 py-0.5 rounded dark:bg-pink-200 dark:text-pink-900">
-                  Google Cloud
-                </span>
+                <span className="bg-pink-100 text-pink-800 mr-2 px-2.5 py-0.5 rounded dark:bg-pink-200 dark:text-pink-900">Google Cloud</span>
               </div>
               <div className="text-center gap-5 italic hidden sm:block">
                 <button type="button" className="button">
@@ -224,12 +231,10 @@ const Projects = () => {
                 <br />
                 Daimmer was my first project ever!
                 <br /> <br /> This is an addictive eye-hand coordination game where you have to press the letter displayed in the black tiles while hovering
-                over them. 
+                over them.
               </p>
               <div className="m-auto w-full sm:w-11/12 sm:mb-10 text-sm font-medium 2xl:text-lg">
-                <span className="bg-blue-100 border border-blue-400 text-blue-800  mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
-                  HTML
-                </span>
+                <span className="bg-blue-100 border border-blue-400 text-blue-800  mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">HTML</span>
                 <span className="bg-gray-100 text-gray-800 mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Pure CSS</span>
                 <span className="bg-yellow-100 border border-yellow-400 text-yellow-800 mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
                   Javascript
