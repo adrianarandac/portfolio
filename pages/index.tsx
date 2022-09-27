@@ -41,7 +41,7 @@ const Home: NextPage = () => {
             <br /> me or my projects?
           </p>
           <div className="flex justify-center gap-4 animate-fade-in">
-            <button className="bg-blue-500 animate-[fade-in_2s_ease-in-out] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+            <button className="bg-blue-500 animate-[fade-in_1s_ease-in-out] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
               <Link href="/about">
                 <a className="font-vietnam">About me</a>
               </Link>
