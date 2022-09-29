@@ -29,7 +29,7 @@ const About: NextPage = () => {
 
           <div className="flex-column  lg:w-6/12 lg:px-4 lg:pr-4 m-auto ">
             <h3 className="text-white text-4xl font-ibarra mb-4 lg:text-[2.5em] 2xl:text-[4.3em] leading-snug text-justified w-auto inline-block">
-              <strong>I’m Adrián, a Software Engineer working remotely for Glovo from sunny Barcelona, Spain.</strong>
+              <strong>I’m Adrián, a Software Engineer working remotely for Glovo in sunny Barcelona, Spain.</strong>
             </h3>
             <p className="text-white font-lato text-lg lg:text-[1em] 2xl:text-[1.3em]">
               <br />
@@ -40,7 +40,7 @@ const About: NextPage = () => {
               </Link>
               's backend engineering team. Now I work as a full stack engineer for               <Link href="https://www.glovo.com">
                 <a className="text-blue-500 animation-pulse transition ease-in-out duration-1000 hover:text-blue-400	hover:underline" target="_blank">Glovo</a>
-              </Link>
+              </Link>.
               <br />
               <br />
               🖥️ These days my time is spent researching and designing personal projects! I also love to help new devs get started with their careers.
