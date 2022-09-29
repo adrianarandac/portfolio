@@ -38,7 +38,7 @@ const About: NextPage = () => {
               <Link href="https://www.bolt.com">
                 <a className="text-blue-500 animation-pulse transition ease-in-out duration-1000 hover:text-blue-400	hover:underline" target="_blank">Bolt's</a>
               </Link>
-              's backend engineering team. Now I work as a full stack engineer for               <Link href="https://www.glovo.com">
+              's backend engineering team. Now I work as a full stack engineer for               <Link href="https://www.glovoapp.com">
                 <a className="text-blue-500 animation-pulse transition ease-in-out duration-1000 hover:text-blue-400	hover:underline" target="_blank">Glovo</a>
               </Link>.
               <br />
