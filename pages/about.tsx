@@ -36,7 +36,7 @@ const About: NextPage = () => {
               🙇🏻 I have a social and creative nature and good skills to see the big picture. I value innovative thinking, focus and the chance to get involved,
               as I am a proactive person and I enjoy sharing ideas. I previously was part of{" "}
               <Link href="https://www.bolt.com">
-                <a className="text-blue-500 animation-pulse transition ease-in-out duration-1000 hover:text-blue-400	hover:underline" target="_blank">Bolt's</a>
+                <a className="text-blue-500 animation-pulse transition ease-in-out duration-1000 hover:text-blue-400	hover:underline" target="_blank">Bolt</a>
               </Link>
               's backend engineering team. Now I work as a full stack engineer for               <Link href="https://www.glovoapp.com">
                 <a className="text-blue-500 animation-pulse transition ease-in-out duration-1000 hover:text-blue-400	hover:underline" target="_blank">Glovo</a>
