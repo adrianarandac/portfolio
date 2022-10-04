@@ -18,7 +18,7 @@ const About: NextPage = () => {
       </Head>
       <Navbar />
 
-      <div className="p-4 mb-10 sm:mb-24 pt-20 lg:pt-[20vh] 2xl:px-72 2xl:mb-[20vh] projects pb-10">
+      <div className="p-4 mb-10 sm:mb-24 pt-20 lg:pt-[20vh] 2xl:mb-[20vh] projects pb-10">
         <div className="flex-col lg:flex lg:flex-row px-2 lg:px-24 justify-center items-center align-middle">
           <div className="p-2 mb-6 lg:hidden">
             <Image alt="adrian aranda" src={adrian2} className="rounded-3xl" />
@@ -27,9 +27,9 @@ const About: NextPage = () => {
             <Image alt="adrian aranda" src={adrian2} layout="fill" objectFit="cover" className=" rounded-3xl overflow-clipped" />
           </div>
 
-          <div className="flex-column  lg:w-6/12 lg:px-4 lg:pr-4 m-auto ">
+          <div className="flex-column lg:w-6/12 lg:px-4 lg:pr-4 m-auto ">
             <h3 className="text-white text-4xl font-ibarra mb-4 lg:text-[2.5em] 2xl:text-[4.3em] leading-snug text-justified w-auto inline-block">
-              <strong>I’m Adrián, a Software Engineer working remotely for Glovo in sunny Barcelona, Spain.</strong>
+              <strong>I’m Adrián, a Software Engineer working remotely for <span className="text-yellow-300">Glovo</span> in sunny Barcelona, Spain.</strong>
             </h3>
             <p className="text-white font-lato text-lg lg:text-[1em] 2xl:text-[1.3em]">
               <br />
