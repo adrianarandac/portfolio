@@ -49,7 +49,7 @@ const Projects = () => {
         <link rel="icon" href="/public/favicon.ico" />
       </Head>{" "}
       <Navbar />
-      <div className="h-screen pb-12 sm:pt-5 bg-white sm:pb-34 projects flex flex-col items-center sm:snap-mandatory snap-y sm:overflow-scroll ">
+      <div className="h-screen pb-12 sm:pt-5 bg-white sm:pb-34 projects flex flex-col items-center sm:snap-mandatory snap-y sm:overflow-scroll">
           {/* SEVEN */}
           <div className="w-full pt-24 pb-16 sm:pb-24 sm:h-[95vh] px-3 from-indigo-300 bg-blue-800 bg-gradient-120 tile flex-column items-center align-middle sm:flex snap-center">
             <div className="hidden sm:w-5/12 sm:flex justify-center animate-[fade-in_2s_ease-in-out]">

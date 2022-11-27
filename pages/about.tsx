@@ -17,9 +17,9 @@ const About: NextPage = () => {
         <link rel="icon" href="/public/favicon.ico" />
       </Head>
       <Navbar />
-
-      <div className="p-4 mb-10 sm:mb-24 pt-20 lg:pt-[20vh] 2xl:mb-[20vh] projects pb-10">
-        <div className="flex-col lg:flex lg:flex-row px-2 lg:px-24 justify-center items-center align-middle">
+      <div className="h-screen sm:snap-mandatory snap-y sm:overflow-scroll">
+      <div className="p-4 mb-10 sm:mb-24 pt-20 lg:pt-[16vh] 2xl:mb-[20vh] projects pb-10 snap-start">
+        <div className="flex-col lg:flex lg:flex-row px-2 lg:px-24 justify-center items-center">
           <div className="p-2 mb-6 lg:hidden">
             <Image alt="adrian aranda" src={adrian2} className="rounded-3xl" />
           </div>
@@ -64,6 +64,7 @@ const About: NextPage = () => {
       </div>
       <Music />
       <Movies />
+      </div>
     </>
   );
 };

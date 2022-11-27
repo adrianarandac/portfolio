@@ -7,7 +7,7 @@ import bladeRunner from "../public/movies/bladerunner.jpg";
 
 function Movies() {
   return (
-    <div className="pt-20 pb-20 sm:mb-36 text-white bg-black lg:py-34">
+    <div className="pt-20 pb-20 sm:mb-36 text-white bg-black lg:py-34 snap-end">
       <div className="flex flex-col justify-center sm:px-20">
         <div>
           <h3 className="font-vietnam text-4xl text-center sm:text-left pb-14">THREE MOVIES:</h3>

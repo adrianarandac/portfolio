@@ -8,7 +8,7 @@ import revolver from "../public/albums/revolver.jpeg";
 
 function Music() {
   return (
-    <div className="py-20 lg:py-34 from-neutral-200 bg-white bg-gradient-120">
+    <div className="py-20 lg:py-34 from-neutral-200 bg-white bg-gradient-120  snap-center">
       <div className="flex flex-col justify-center sm:px-20">
         <div>
           <h3 className="font-vietnam text-4xl text-center sm:text-left pb-14">THREE ALBUMS:</h3>
