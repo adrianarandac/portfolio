@@ -5,11 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 const Home: NextPage = () => {
-  const [count, setCount] = useState(0);
-  const increment = () => {
-    setCount(count + 420);
-  };
-
+  
   return (
     <div>
       <Head>

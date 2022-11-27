@@ -49,9 +49,9 @@ const Projects = () => {
         <link rel="icon" href="/public/favicon.ico" />
       </Head>{" "}
       <Navbar />
-      <div className="h-screen pb-12 sm:pt-5 bg-white sm:pb-34 projects">
-        <div className="flex flex-col items-center">
-          <div className="w-full pt-24 pb-16 sm:pb-24 sm:h-[95vh] px-3 from-indigo-300 bg-blue-700 bg-gradient-120 tile flex-column items-center align-middle sm:flex">
+      <div className="h-screen pb-12 sm:pt-5 bg-white sm:pb-34 projects flex flex-col items-center sm:snap-mandatory snap-y sm:overflow-scroll ">
+          {/* SEVEN */}
+          <div className="w-full pt-24 pb-16 sm:pb-24 sm:h-[95vh] px-3 from-indigo-300 bg-blue-800 bg-gradient-120 tile flex-column items-center align-middle sm:flex snap-center">
             <div className="hidden sm:w-5/12 sm:flex justify-center animate-[fade-in_2s_ease-in-out]">
               <button onClick={decreaseSeven}>O</button>
 
@@ -70,18 +70,18 @@ const Projects = () => {
                 transform coordinates to formatted addresses!
               </p>
               <div className="mb-10 m-auto sm:w-11/12 2xl:text-lg">
-                <span className="bg-yellow-100 border border-yellow-400 text-yellow-800 mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
+                <span className="border border-yellow-400  mr-2 px-2.5 py-0.5 rounded bg-yellow-200 text-yellow-900">
                   React
                 </span>
-                <span className="bg-gray-100 text-gray-800 mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">MongoDB</span>
-                <span className="bg-blue-100 border border-blue-400 text-blue-800 mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
+                <span className="border border-gray-800  mr-2 px-2.5 py-0.5 rounded bg-gray-700 text-gray-300">MongoDB</span>
+                <span className="border border-blue-400 mr-2 px-2.5 py-0.5 rounded bg-blue-200 text-blue-800">
                   Mapbox
                 </span>{" "}
-                <br />
-                <span className="bg-green-100 text-green-800 border border-green-800 mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
+                <div className="my-2"></div>
+                <span className="text-green-800 border border-green-800 mr-2 px-2.5 py-0.5 rounded bg-green-200 ">
                   Tailwind
                 </span>
-                <span className="bg-pink-100 text-pink-800 mr-2 px-2.5 py-0.5 rounded dark:bg-pink-200 dark:text-pink-900">Google Cloud</span>
+                <span className="border border-pink-900 mr-2 px-2.5 py-0.5 rounded bg-pink-200 text-pink-900">Google Cloud</span>
               </div>
               <div className="text-center gap-5 italic hidden sm:block">
                 <button type="button" className="button">
@@ -135,7 +135,8 @@ const Projects = () => {
               </button>
             </div>
           </div>
-          <div className="w-full pt-24 pb-16 sm:pb-24 sm:h-[90vh] px-3 from-pink-300  bg-pink-500 bg-gradient-120 tile flex-column items-center align-middle sm:flex">
+          {/* APIPIE */}
+          <div className="w-full pt-24 pb-16 sm:pb-24 sm:h-[90vh] px-3 from-pink-300  bg-pink-500 bg-gradient-120 tile flex-column items-center align-middle sm:flex snap-center">
             <div className="flex-col sm:w-3/5 sm:pl-40 ">
               <h3 className="text-white text-[3.5em] 2xl:text-[5.5em] font-vietnam transition ease-in-out duration-1000 w-auto inline-block  hover:-translate-y-1">
                 <strong>Apipie</strong>
@@ -148,19 +149,19 @@ const Projects = () => {
                 my first experience building a full stack app. The app feels responsive, looks clean and <strong>works well</strong>!
               </p>
               <div className="m-auto w-full sm:w-11/12 sm:mb-10 text-sm font-medium 2xl:text-lg mb-10">
-                <span className="bg-yellow-100 border border-yellow-400 text-yellow-800 mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
+                <span className="border border-yellow-600 mr-2 px-2.5 py-0.5 rounded bg-yellow-200 text-yellow-900">
                   HTML
                 </span>
-                <span className="bg-green-100 text-green-800 border border-green-800 mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
+                <span className="border border-green-800 mr-2 px-2.5 py-0.5 rounded bg-green-200 text-green-900">
                   Express
                 </span>
 
-                <span className="bg-gray-100 text-gray-800  mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Mongoose</span>
-                <span className="bg-blue-100 border border-blue-400 text-blue-800 mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
+                <span className="border border-gray-800  mr-2 px-2.5 py-0.5 rounded bg-gray-700 text-gray-300">Mongoose</span>
+                <span className="border border-blue-400 mr-2 px-2.5 py-0.5 rounded bg-blue-200 text-blue-800">
                   Bootstrap
                 </span>
               </div>
-              <div className="text-center flex gap-5 mb-3 hidden sm:block sm:justify-end">
+              <div className="text-center gap-5 mb-3 hidden sm:block sm:justify-end">
                 <button type="button" className="button">
                   <Link href="https://github.com/AdDanNiTom">
                     <a
@@ -218,7 +219,8 @@ const Projects = () => {
               </button>
             </div>
           </div>
-          <div className="w-full pt-24 pb-16 sm:pb-24 sm:h-[90vh] px-3 from-yellow-200 bg-yellow-500 bg-gradient-120 tile flex-column items-center align-middle sm:flex">
+          {/* DAIMMER */}
+          <div className="w-full pt-24 pb-16 sm:pb-24 sm:h-[90vh] px-3 from-yellow-200 bg-yellow-500 bg-gradient-120 tile flex-column items-center align-middle sm:flex snap-end">
             <div className="hidden sm:w-6/12 sm:flex justify-center animate-[fade-in_2s_ease-in-out]">
               <Image alt="daimmer video" src={daimmerGif} objectFit={"contain"} width={700} height={700} className="m-auto" />
             </div>
@@ -234,12 +236,12 @@ const Projects = () => {
                 over them.
               </p>
               <div className="m-auto w-full sm:w-11/12 sm:mb-10 text-sm font-medium 2xl:text-lg">
-                <span className="bg-blue-100 border border-blue-400 text-blue-800  mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">HTML</span>
-                <span className="bg-gray-100 text-gray-800 mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Pure CSS</span>
-                <span className="bg-yellow-100 border border-yellow-400 text-yellow-800 mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
+                <span className="border border-blue-400 mr-2 px-2.5 py-0.5 rounded bg-blue-200 text-blue-800">HTML</span>
+                <span className="border border-gray-800  mr-2 px-2.5 py-0.5 rounded bg-gray-700 text-gray-300">Pure CSS</span>
+                <span className="border border-yellow-600 mr-2 px-2.5 py-0.5 rounded bg-yellow-200 text-yellow-900">
                   Javascript
                 </span>
-                <span className="bg-green-100 text-green-800 border border-green-800 mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
+                <span className="border border-green-800 mr-2 px-2.5 py-0.5 rounded bg-green-200 text-green-900">
                   Express.js
                 </span>
               </div>
@@ -293,7 +295,6 @@ const Projects = () => {
               </button>
             </div>
           </div>
-        </div>
       </div>
     </>
   );
