@@ -17,14 +17,14 @@ const About: NextPage = () => {
         <link rel="icon" href="/public/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="h-screen sm:snap-mandatory snap-y xl:overflow-scroll">
-      <div className="p-4 mb-10 sm:mb-24 pt-20 lg:pt-[16vh] 2xl:mb-[20vh] projects pb-10 snap-start">
+      <div className="h-screen">
+      <div className="p-4 mb-10 sm:mb-24 pt-20 lg:pt-[16vh] 2xl:mb-[20vh] projects pb-10">
         <div className="flex-col lg:flex lg:flex-row px-2 lg:px-24 justify-center items-center">
           <div className="p-2 mb-6 lg:hidden">
             <Image alt="adrian aranda" src={adrian2} className="rounded-3xl" />
           </div>
           <div className="w-5/12 hidden m-auto lg:px-5 lg:block relative aspect-square">
-            <Image alt="adrian aranda" src={adrian2} layout="fill" objectFit="cover" className=" rounded-3xl overflow-clipped" />
+            <Image alt="adrian aranda" src={adrian2} layout="fill" objectFit="cover" className="rounded-3xl" />
           </div>
 
           <div className="flex-column lg:w-6/12 lg:px-4 lg:pr-4 m-auto ">
