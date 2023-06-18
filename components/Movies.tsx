@@ -6,6 +6,7 @@ import trumanShow from "../public/movies/thetrumanshow.jpg";
 import bladeRunner from "../public/movies/bladerunner.jpg";
 
 function Movies() {
+  //COMMENT
   return (
     <div className="pt-20 pb-20 sm:mb-36 text-white bg-black lg:py-34 snap-end">
       <div className="flex flex-col justify-center sm:px-20">
