@@ -29,24 +29,27 @@ const About: NextPage = () => {
 
           <div className="flex-column lg:w-6/12 lg:px-4 lg:pr-4 m-auto ">
             <h3 className="text-white text-4xl font-ibarra mb-4 lg:text-[2.5em] 2xl:text-[4.3em] leading-snug text-justified w-auto inline-block">
-              <strong>I’m Adrián, a Software Engineer working remotely for <span className="text-yellow-300">Glovo</span> in sunny Barcelona, Spain.</strong>
+              <strong>I’m Adrian, a Software Engineer working remotely for <span className="text-yellow-300">Pleo</span> in sunny Barcelona, Spain.</strong>
             </h3>
             <p className="text-white font-lato text-lg lg:text-[1em] 2xl:text-[1.3em]">
               <br />
               🙇🏻 I have a social and creative nature and good skills to see the big picture. I value innovative thinking, focus and the chance to get involved,
               as I am a proactive person and I enjoy sharing ideas. I previously was part of{" "}
               <Link href="https://www.bolt.com">
-                <a className="text-blue-500 animation-pulse transition ease-in-out duration-1000 hover:text-blue-400	hover:underline" target="_blank">Bolt</a>
+                <a className="text-blue-500 animation-pulse transition ease-in-out duration-1000 hover:text-blue-400	hover:underline" target="_blank">Bolt's </a>
+              </Link> and
+              <Link href="https://www.glovoapp.com">
+                <a className="text-blue-500 animation-pulse transition ease-in-out duration-1000 hover:text-blue-400	hover:underline" target="_blank"> Glovo's </a>
               </Link>
-              's backend engineering team. Now I work as a full stack engineer for               <Link href="https://www.glovoapp.com">
-                <a className="text-blue-500 animation-pulse transition ease-in-out duration-1000 hover:text-blue-400	hover:underline" target="_blank">Glovo</a>
+              fullstack engineering teams. Now I work as a back end engineer for               <Link href="https://www.pleo.io">
+                <a className="text-blue-500 animation-pulse transition ease-in-out duration-1000 hover:text-blue-400	hover:underline" target="_blank">Pleo</a>
               </Link>.
               <br />
               <br />
-              🖥️ These days my time is spent researching and designing personal projects! I also love to help new devs get started with their careers.
+              🖥️ As a software engineer with a passion for building robust end-to-end solutions, I have experience in JVM environments, Python and modern UI frameworks such as React or Vue. Thanks to my background in audiovisual media and customer success, I bring a comprehensive and product-oriented approach to software development. My expertise lies in developing scalable distributed systems and data pipelines with technologies like Pyspark and Airflow.
               <br />
               <br />
-              🎧 Besides my tech interests, out of the office you’ll find me playing chess, producing music or dreaming about having a cat.
+              🎧 Besides my tech interests, out of the office you’ll find me playing chess, producing music, swimming or dreaming about having a sphynx cat.
               <br />
               <br />
               ⭐️ Please, feel free to contact me at{" "}
