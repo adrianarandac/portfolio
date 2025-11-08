@@ -33,10 +33,12 @@ const skillClusters = [
   { title: "Systems", items: ["Java/Kotlin", "Spring", "FastAPI", "Kafka", "Airflow"] },
   { title: "Data", items: ["PySpark", "Data Mesh", "Event pipelines", "SQL"] },
   { title: "Infrastructure", items: ["AWS", "Terraform", "Kubernetes", "Docker", "Spinnaker"] },
-  { title: "Observability", items: ["Datadog", "Tracing", "Lean dashboards"] },
+  { title: "Observability", items: ["Datadog", "Tracing", "Dashboards"] },
   { title: "Interface", items: ["React", "Next.js", "Vue", "Tailwind"] },
   { title: "Practices", items: ["TDD", "Lean delivery", "Calm comms"] },
 ];
+
+const languages = ["English · C2", "Spanish · Native", "Catalan · Native"];
 
 const About: NextPage = () => {
   return (
@@ -54,10 +56,10 @@ const About: NextPage = () => {
       <main className="layout stack-lg">
         <section className="section-block bio-grid">
           <div className="stack">
-            <p className="eyebrow">Biography</p>
+            <p className="eyebrow">Hey there,</p>
             <h1>I’m Adrián, a backend engineer at Pleo.</h1>
             <p className="muted">
-              I’m a proactive, social, and creative person with a big-picture mindset. I’ve partnered with teams at{' '}
+              I’m a pragmatic engineer with a taste for concise UX. I’ve partnered with teams at{' '}
               <Link href="https://www.bolt.com" target="_blank" rel="noreferrer" className="link-underline accent">
                 Bolt
               </Link>
@@ -65,58 +67,47 @@ const About: NextPage = () => {
               <Link href="https://www.glovoapp.com" target="_blank" rel="noreferrer" className="link-underline accent">
                 Glovo
               </Link>
-              , and currently <span className="accent">Pleo</span>. I focus on JVM environments with microservices and event-driven design, pairing data with product thinking.
+              , and now <span className="accent">Pleo</span>, shipping JVM services, payments, and tooling for product squads.
             </p>
             <p className="muted">
-              When not working you’ll find me producing music, swimming, or dreaming about having a sphynx cat. My background in sales and audiovisuals keeps my engineering grounded in storytelling and clarity.
+              Track record covers microservices, data pipelines, infrastructure-as-code, and measured interfaces. <br/>When not coding, you'll find me swimming and recording music at my home studio.
             </p>
-            <div className="stack">
-              <div className="accent-row">
-                <span className="small-label">Focus</span>
-                <span>Event-driven systems, observability, calm UI.</span>
-              </div>
-              <div className="accent-row">
-                <span className="small-label">Stack</span>
-                <span>Kotlin · Java · PySpark · React.</span>
-              </div>
-            </div>
           </div>
           <figure className="portrait-frame">
             <div className="media-frame">
               <Image alt="Adrián Aranda" src={adrian2} placeholder="blur" />
             </div>
-            <figcaption>Barcelona, captured between rehearsals.</figcaption>
           </figure>
         </section>
 
-        <section className="section-block experience-list">
-          <p className="eyebrow">Experience</p>
-          {experience.map((item) => (
-            <article key={item.company} className="experience-item">
-              <p className="small-label">{item.timeframe}</p>
-              <h2>
-                {item.role}, <span className="accent">{item.company}</span>
-              </h2>
-              <p className="muted">{item.summary}</p>
-            </article>
-          ))}
-        </section>
-
-        <section className="section-block stack">
-          <p className="eyebrow">Stacks</p>
-          <div className="skills-grid">
+        <section className="section-block experience-grid">
+          <div className="stack">
+            <p className="eyebrow">Experience</p>
+            {experience.map((item) => (
+              <article key={item.company} className="experience-item">
+                <p className="small-label">{item.timeframe}</p>
+                <h2>
+                  {item.role}, <span className="accent">{item.company}</span>
+                </h2>
+                <p className="muted">{item.summary}</p>
+              </article>
+            ))}
+          </div>
+          <div className="stack">
+            <p className="eyebrow">Stacks & Capabilities</p>
             {skillClusters.map((cluster) => (
-              <div key={cluster.title} className="stack">
+              <div key={cluster.title} className="accent-row">
                 <span className="small-label">{cluster.title}</span>
-                <div className="language-list">
-                  {cluster.items.map((item) => (
-                    <span key={item} className="accent-pill">
-                      {item}
-                    </span>
-                  ))}
-                </div>
+                <span>{cluster.items.join(' · ')}</span>
               </div>
             ))}
+            <div className="language-list">
+              {languages.map((lang) => (
+                <span key={lang} className="accent-pill">
+                  {lang}
+                </span>
+              ))}
+            </div>
           </div>
         </section>
       </main>

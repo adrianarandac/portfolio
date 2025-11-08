@@ -11,30 +11,32 @@ function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="stack">
-      <div className="stack">
-        <label className="small-label" htmlFor="full-name">
-          Full Name
-        </label>
-        <input className="input-minimal" name="full-name" id="full-name" type="text" placeholder="First and Last" />
-      </div>
-      <div className="stack">
-        <label className="small-label" htmlFor="email-address">
-          Email Address
-        </label>
-        <input className="input-minimal" type="email" name="_replyto" id="email-address" placeholder="you@email.com" required />
-        <ValidationError prefix="Email" field="email" errors={state.errors} />
-      </div>
-      <div className="stack">
-        <label htmlFor="message" className="small-label">
-          Your message
-        </label>
-        <textarea name="message" id="message" rows={4} className="input-minimal" placeholder="Write it all" required></textarea>
-        <ValidationError prefix="Message" field="message" errors={state.errors} />
+    <form onSubmit={handleSubmit} className="contact-card">
+      <div className="form-grid">
+        <div className="form-row">
+          <label className="small-label" htmlFor="full-name">
+            Full Name
+          </label>
+          <input className="input-minimal" name="full-name" id="full-name" type="text" placeholder="First and Last" />
+        </div>
+        <div className="form-row">
+          <label className="small-label" htmlFor="email-address">
+            Email Address
+          </label>
+          <input className="input-minimal" type="email" name="_replyto" id="email-address" placeholder="you@email.com" required />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
+        </div>
+        <div className="form-row">
+          <label htmlFor="message" className="small-label">
+            Your message
+          </label>
+          <textarea name="message" id="message" rows={4} className="input-minimal" placeholder="Write it all" required></textarea>
+          <ValidationError prefix="Message" field="message" errors={state.errors} />
+        </div>
       </div>
       <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission" />
       <button type="submit" value="Submit" className="button-minimal">
-        Submit
+        Send
       </button>
     </form>
   );
@@ -55,7 +57,7 @@ function Contact() {
       <Navbar />
       <main className="layout stack-lg">
         <section className="section-block contact-grid">
-          <div className="stack">
+          <div className="stack contact-card">
             <p className="eyebrow">Say hello</p>
             <h1>Questions? Comments? Let’s talk.</h1>
             <p className="muted">

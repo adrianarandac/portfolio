@@ -11,6 +11,7 @@ import apipiePng1 from "../public/apipie-1.png";
 import apipiePng2 from "../public/apipie-2.png";
 import apipiePng3 from "../public/apipie-3.png";
 import apipiePng4 from "../public/apipie-4.png";
+import daimmerGif from "../public/daimmer-macbook.png";
 
 type Project = {
   slug: string;
@@ -50,16 +51,16 @@ const projects: Project[] = [
     images: [apipiePng, apipiePng1, apipiePng2, apipiePng3, apipiePng4],
   },
   {
-    slug: "chatdatahub",
-    label: "ChatDataHub",
-    eyebrow: "Project · ChatDataHub",
-    title: "Slack-native NLP assistant for delivery ops.",
+    slug: "daimmer",
+    label: "Daimmer",
+    eyebrow: "Project · Daimmer",
+    title: "An eye-hand coordination playground.",
     description:
-      "Python + OpenAI + Slack orchestration that reads Glovo knowledge bases, synthesises insights via Gradio, and runs on EC2 for on-call decision making.",
-    stack: "Python · OpenAI API · Slack API · Gradio · AWS EC2",
-    source: "https://github.com/adrianarandac",
-    live: "https://github.com/adrianarandac",
-    images: [],
+      "My first build: a keyboard + pointer reflex game where headless Puppeteer-tested flows simulate tiles, teaching me DOM control and timing curves.",
+    stack: "HTML · Pure CSS · Express.js · Socket-style interactions",
+    source: "https://github.com/adrianarandac/daimmer",
+    live: "https://adrianarandac.github.io/daimmer/",
+    images: [daimmerGif],
   },
 ];
 
@@ -100,9 +101,9 @@ const Projects = () => {
       </Head>
       <Navbar />
       <main className="layout stack-lg">
-        <header className="section-block stack">
-          <h1>Projects.</h1>
-        </header>
+        {/*<header className="section-block stack">*/}
+        {/*  <h1>Projects.</h1>*/}
+        {/*</header>*/}
 
         <div role="tablist" aria-label="Projects" className="tab-list">
           {projects.map((project) => (
