@@ -1,18 +1,48 @@
-import React from "react";
 import type { NextPage } from "next";
-import Navbar from "../components/Navbar";
 import Head from "next/head";
 import Image from "next/image";
-import adrian2 from "../public/adrian-profile.png";
-import Music from "../components/Music";
-import Movies from "../components/Movies";
 import Link from "next/link";
+import Navbar from "../components/Navbar";
+import adrian2 from "../public/adrian-profile.png";
+
+const experience = [
+  {
+    role: "Backend Software Engineer",
+    company: "Pleo",
+    timeframe: "Jun 2023 – Present · Barcelona",
+    summary:
+      "Owning card-domain services in Java/Kotlin, evolving Terraform + Kubernetes stacks, and tightening observability so finance teams feel invisible tooling.",
+  },
+  {
+    role: "Full Stack Software Engineer",
+    company: "Glovo",
+    timeframe: "2022 – 2023 · Barcelona",
+    summary:
+      "Scaled courier-facing microservices, shipped event-driven pipelines consuming 2.5M+ events/day, and paired with UX to design minimal operator panels in Vue.",
+  },
+  {
+    role: "Back End Software Engineer",
+    company: "Bolt",
+    timeframe: "2021 – 2022 · Remote (US)",
+    summary:
+      "Built crawlers and checkout simulators that ingested 400k+ products, and automated partner-store flows with headless Puppeteer for commerce experiments.",
+  },
+];
+
+const skillClusters = [
+  { title: "Systems", items: ["Java/Kotlin", "Spring", "FastAPI", "Kafka", "Airflow"] },
+  { title: "Data", items: ["PySpark", "Data Mesh", "Event pipelines", "SQL"] },
+  { title: "Infrastructure", items: ["AWS", "Terraform", "Kubernetes", "Docker", "Spinnaker"] },
+  { title: "Observability", items: ["Datadog", "Tracing", "Lean dashboards"] },
+  { title: "Interface", items: ["React", "Next.js", "Vue", "Tailwind"] },
+  { title: "Practices", items: ["TDD", "Lean delivery", "Calm comms"] },
+];
 
 const About: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Adrián Aranda - About Page</title>
+        <title>Adrián Aranda - About</title>
         <meta
           name="description"
           content="I’m Adrián Aranda, a software engineer from Barcelona, Spain. Learn more about me and my tech stack!"
@@ -21,67 +51,75 @@ const About: NextPage = () => {
         <link rel="icon" href="/public/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="">
-        <div className="p-4 mb-10 sm:mb-24 pt-20 lg:pt-[16vh] 2xl:mb-[20vh] projects pb-10">
-          <div className="flex-col lg:flex lg:flex-row px-2 lg:px-24 justify-center items-center">
-            <div className="p-2 mb-6 lg:hidden">
-              <Image alt="adrian aranda" src={adrian2} className="rounded-3xl" />
-            </div>
-            <div className="w-5/12 hidden m-auto lg:px-5 lg:block relative aspect-square ">
-              <Image alt="adrian aranda" src={adrian2} layout="fill" objectFit="cover" className="rounded-3xl" />
-            </div>
-
-            <div className="flex-column lg:w-6/12 lg:px-4 lg:pr-4 m-auto ">
-              <h3 className="text-white text-4xl font-ibarra mb-4 lg:text-[2.5em] 2xl:text-[4.3em] leading-snug text-justified w-auto inline-block">
-                <strong>
-                  I’m Adrián, a software engineer for <span className="text-yellow-300">Pleo</span> based in sunny <br /> Barcelona, Spain.
-                </strong>
-              </h3>
-              <p className="text-white font-lato text-lg lg:text-[1em] 2xl:text-[1.3em]">
-                I’m a proactive, social, and creative person with a big-picture mindset. I’ve worked with fullstack engineering teams for companies such as{" "}
-                <Link href="https://www.bolt.com">
-                  <a className="text-yellow-400 hover:text-yellow-500 hover:underline" target="_blank">
-                    Bolt
-                  </a>
-                </Link>{" "}
-                and{" "}
-                <Link href="https://www.glovoapp.com">
-                  <a className="text-yellow-400 hover:text-yellow-500 hover:underline" target="_blank">
-                    Glovo
-                  </a>
-                </Link>
-                .<br /> Currently I’m a backend engineer at{" "}
-                <Link href="https://www.pleo.io">
-                  <a className="text-yellow-400 hover:text-yellow-500 hover:underline" target="_blank">
-                    Pleo
-                  </a>
-                </Link>
-                .
-                <br />
-                <br />
-                I specialize in JVM environments with microservices and event-driven design, even though I'm also experienced with Pyspark, Airflow, and data
-                products. My background in sales and audiovisuals gives me a product-focused approach to development.
-                <br />
-                <br />
-                When not working, you'll find me producing music, swimming, or dreaming of having a sphynx cat.
-                <br />
-                <br />
-                Please, reach me at{" "}
-                <a className="text-yellow-400" href="mailto:adrienaranda@gmail.com">
-                  adrienaranda@gmail.com
-                </a>{" "}
-                or{" "}
-                <a className="text-yellow-400" href="adrian_aranda_resume.pdf" download="adrian_aranda_resume">
-                  download my CV
-                </a>
-                .
-              </p>
+      <main className="layout stack-lg">
+        <section className="section-block bio-grid">
+          <div className="stack">
+            <p className="eyebrow">Biography</p>
+            <h1>I’m Adrián, a backend engineer at Pleo.</h1>
+            <p className="muted">
+              I’m a proactive, social, and creative person with a big-picture mindset. I’ve partnered with teams at{' '}
+              <Link href="https://www.bolt.com" target="_blank" rel="noreferrer" className="link-underline accent">
+                Bolt
+              </Link>
+              ,{' '}
+              <Link href="https://www.glovoapp.com" target="_blank" rel="noreferrer" className="link-underline accent">
+                Glovo
+              </Link>
+              , and currently <span className="accent">Pleo</span>. I focus on JVM environments with microservices and event-driven design, pairing data with product thinking.
+            </p>
+            <p className="muted">
+              When not working you’ll find me producing music, swimming, or dreaming about having a sphynx cat. My background in sales and audiovisuals keeps my engineering grounded in storytelling and clarity.
+            </p>
+            <div className="stack">
+              <div className="accent-row">
+                <span className="small-label">Focus</span>
+                <span>Event-driven systems, observability, calm UI.</span>
+              </div>
+              <div className="accent-row">
+                <span className="small-label">Stack</span>
+                <span>Kotlin · Java · PySpark · React.</span>
+              </div>
             </div>
           </div>
-        </div>
-        <Music />
-        <Movies />
-      </div>
+          <figure className="portrait-frame">
+            <div className="media-frame">
+              <Image alt="Adrián Aranda" src={adrian2} placeholder="blur" />
+            </div>
+            <figcaption>Barcelona, captured between rehearsals.</figcaption>
+          </figure>
+        </section>
+
+        <section className="section-block experience-list">
+          <p className="eyebrow">Experience</p>
+          {experience.map((item) => (
+            <article key={item.company} className="experience-item">
+              <p className="small-label">{item.timeframe}</p>
+              <h2>
+                {item.role}, <span className="accent">{item.company}</span>
+              </h2>
+              <p className="muted">{item.summary}</p>
+            </article>
+          ))}
+        </section>
+
+        <section className="section-block stack">
+          <p className="eyebrow">Stacks</p>
+          <div className="skills-grid">
+            {skillClusters.map((cluster) => (
+              <div key={cluster.title} className="stack">
+                <span className="small-label">{cluster.title}</span>
+                <div className="language-list">
+                  {cluster.items.map((item) => (
+                    <span key={item} className="accent-pill">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
     </>
   );
 };
