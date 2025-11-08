@@ -87,7 +87,7 @@ const About: NextPage = () => {
               <article key={item.company} className="experience-item">
                 <p className="small-label">{item.timeframe}</p>
                 <h2>
-                  {item.role}, <span className="accent">{item.company}</span>
+                 - {item.role}, <span className="accent"><i>{item.company}</i></span>
                 </h2>
                 <p className="muted">{item.summary}</p>
               </article>
