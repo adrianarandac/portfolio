@@ -8,22 +8,22 @@ import adrian2 from "../public/adrian-profile.png";
 const experience = [
   {
     role: "Backend Software Engineer",
-    company: "Pleo",
-    timeframe: "Jun 2023 – Present · Barcelona",
+    company: "- Pleo",
+    timeframe: "Jun 2023 – Present | Barcelona",
     summary:
       "Owning card-domain services in Java/Kotlin, evolving Terraform + Kubernetes stacks, and improving observability so finance teams get seamless, reliable tooling.",
   },
   {
     role: "Fullstack Software Engineer",
-    company: "Glovo",
-    timeframe: "2022 – 2023 · Barcelona",
+    company: "- Glovo",
+    timeframe: "2022 – 2023 | Barcelona",
     summary:
       "Scaled courier-facing microservices, shipped event driven pipelines consuming 2.5M+ events/day, and paired with UX to design minimal operator panels in Vue.",
   },
   {
     role: "Backend Software Engineer",
-    company: "Bolt",
-    timeframe: "2021 – 2022 · Remote (US)",
+    company: "- Bolt",
+    timeframe: "2021 – 2022 | Remote (US)",
     summary:
       "Built crawlers and checkout simulators that ingested 400k+ products, and automated partner-store flows with headless scrappers for commerce embedded marketing.",
   },
@@ -86,7 +86,7 @@ const About: NextPage = () => {
                 <article key={item.company} className="experience-item timeline-item">
                   <p className="small-label">{item.timeframe}</p>
                   <h2>
-                   - {item.role}, <span className="accent"><i>{item.company}</i></span>
+                      • {item.role} <span className="accent"><i>{item.company}</i></span>
                   </h2>
                   <p className="muted">{item.summary}</p>
                 </article>

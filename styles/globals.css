@@ -1,6 +1,6 @@
 :root {
   --page: #0c0d11;
-  --page-offset: #151720;
+  --page-offset: rgba(21, 23, 32, 0);
   --text: #f5f1e8;
   --muted: rgba(245, 241, 232, 0.68);
   --stroke: rgba(250, 240, 175, 0.44);
@@ -12,7 +12,7 @@
 .light {
   color-scheme: light;
   --page: #f7f2ea;
-  --page-offset: #eee6db;
+  --page-offset: rgba(238, 230, 219, 0);
   --text: #151519;
   --muted: rgba(21, 21, 25, 0.65);
   --stroke: rgba(21, 21, 25, 0.12);
@@ -300,7 +300,7 @@ img {
 }
 
 .experience-timeline {
-  --timeline-line-offset: 0.85rem;
+  --timeline-line-offset: 1rem;
   --timeline-content-offset: 2.8rem;
   --timeline-dot-size: 14px;
   position: relative;
@@ -311,15 +311,14 @@ img {
 .experience-timeline::before {
   content: "";
   position: absolute;
-  top: 0.4rem;
+  top: 1rem;
   bottom: 0.4rem;
   left: var(--timeline-line-offset);
   width: 1px;
     background: linear-gradient(
             180deg,
-            var(--accent) 0%,
-            color-mix(in srgb, var(--accent) 50%, var(--accent)) 50%,
-            var(--accent) 100%
+            color-mix(in srgb, var(--accent) 50%, var(--accent)) 80%,
+            var(--page-offset) 100%
     );
   opacity: 0.75;
 }
