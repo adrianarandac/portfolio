@@ -3,7 +3,7 @@
   --page-offset: #151720;
   --text: #f5f1e8;
   --muted: rgba(245, 241, 232, 0.68);
-  --stroke: rgba(250, 240, 175, 0.17);
+  --stroke: rgba(250, 240, 175, 0.44);
   --accent: #fff076;
   --accent-bg: #fff076;
   --accent-soft: rgba(241, 194, 125, 0.18);
@@ -305,7 +305,7 @@ img {
   --timeline-dot-size: 14px;
   position: relative;
   padding-left: var(--timeline-content-offset);
-  margin-left: 0.4rem;
+  margin-left: 0.5rem;
 }
 
 .experience-timeline::before {
@@ -314,12 +314,13 @@ img {
   top: 0.4rem;
   bottom: 0.4rem;
   left: var(--timeline-line-offset);
-  width: 2px;
-  background: linear-gradient(
-    180deg,
-    var(--accent) 0%,
-    color-mix(in srgb, var(--text) 18%, transparent) 90%
-  );
+  width: 1px;
+    background: linear-gradient(
+            180deg,
+            var(--accent) 0%,
+            color-mix(in srgb, var(--accent) 50%, var(--accent)) 50%,
+            var(--accent) 100%
+    );
   opacity: 0.75;
 }
 
@@ -340,14 +341,13 @@ img {
 .timeline-item::before {
   content: "";
   position: absolute;
-  top: 0.35rem;
-  left: calc(var(--timeline-line-offset) - (var(--timeline-dot-size) / 2));
+  top: 0.55rem;
+  left: calc(var(--timeline-line-offset) - var(--timeline-content-offset) - (var(--timeline-dot-size) / 2));
   width: var(--timeline-dot-size);
   height: var(--timeline-dot-size);
   border-radius: 50%;
-  border: 2px solid var(--page);
   background: var(--accent);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 5px 0 var(--accent);
 }
 
 .experience-item {
