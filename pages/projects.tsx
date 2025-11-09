@@ -29,7 +29,7 @@ const projects: Project[] = [
   {
     slug: "seven",
     label: "SEVEN",
-    eyebrow: "Project · SEVEN",
+    eyebrow: "Project: SEVEN",
     title: "Plan your next seven days with geolocation superpowers.",
     description:
       "SEVEN is the way to realistically plan your free time for the next 7 days. This full-stack app revolves around geolocation thanks to Mapbox and the Google Maps API, along with the Geocoder library to transform coordinates to formatted addresses.",
@@ -41,7 +41,7 @@ const projects: Project[] = [
   {
     slug: "apipie",
     label: "Apipie",
-    eyebrow: "Project · Apipie",
+    eyebrow: "Project: Apipie",
     title: "The collaborative recipe book.",
     description:
       "Even though it's not as technically advanced as SEVEN, this project is my personal favourite because it was fun to build and also my first full stack app. The experience stays responsive, clean, and warm.",
@@ -53,8 +53,8 @@ const projects: Project[] = [
   {
     slug: "daimmer",
     label: "Daimmer",
-    eyebrow: "Project · Daimmer",
-    title: "An eye-hand coordination playground.",
+    eyebrow: "Project: Daimmer",
+    title: "An eye-hand coordination game.",
     description:
       "My first build: a keyboard + pointer reflex game where headless Puppeteer-tested flows simulate tiles, teaching me DOM control and timing curves.",
     stack: "HTML · Pure CSS · Express.js · Socket-style interactions",
