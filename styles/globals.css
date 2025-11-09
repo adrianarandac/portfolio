@@ -549,10 +549,10 @@ img {
   border-bottom: 1px solid var(--stroke);
   position: sticky;
   top: 0;
-  z-index: 40;
+  z-index: 999;
   background: var(--page);
-  background: color-mix(in srgb, var(--page) 72%, transparent);
-  backdrop-filter: blur(29px);
+  background: color-mix(in srgb, var(--page) 86%, rgba(0, 0, 0, 0.45));
+  backdrop-filter: blur(16px);
 }
 
 .navbar-inner {
@@ -696,7 +696,7 @@ img {
   .nav-link.active::before {
     content: "";
     position: absolute;
-    top: -0.7rem;
+    bottom: -0.6rem;
     left: 0;
     right: 0;
     height: 2px;
