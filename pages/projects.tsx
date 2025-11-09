@@ -138,14 +138,9 @@ const Projects = () => {
             </div>
           </div>
           <figure className="project-media">
-            {hasImages ? (
+            {hasImages && (
               <div className="media-frame">
                 <Image alt={`${activeProject.label} interface`} src={images[currentImageIndex]} className="project-image" />
-              </div>
-            ) : (
-              <div className="accent-row">
-                <span className="small-label">Preview</span>
-                <span>Kept internal — happy to demo live.</span>
               </div>
             )}
             {hasImages && images.length > 1 && (

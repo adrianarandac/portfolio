@@ -196,9 +196,11 @@ img {
 .accent-row {
   display: flex;
   justify-content: space-between;
+    align-self: center;
+    width: 95%;
   gap: 1rem;
   padding: 0.8rem 0;
-  border-bottom: 1px solid rgba(245, 244, 240, 0.08);
+  border-bottom: 1px solid rgb(62, 62, 62);
   font-size: 0.9rem;
 }
 
@@ -236,8 +238,7 @@ img {
 
 .media-frame img,
 .project-image {
-  width: 90%;
-  height: 90%;
+  height: 100%;
   object-fit: cover;
   display: block;
     margin: 0;
@@ -429,7 +430,7 @@ img {
 
 .contact-email {
   text-decoration: none;
-  /*padding: 0.5rem 1.4rem;*/
+  padding: 0.5rem 1.4rem;
   border-radius: 999px;
   color: var(--text);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
@@ -681,7 +682,7 @@ img {
   .bio-grid {
     grid-template-columns: 1.4fr 0.8fr;
     align-items: center;
-      margin: 8vh 0;
+      margin: 7.5vh 0;
   }
 
   .project-grid {

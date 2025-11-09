@@ -99,7 +99,7 @@ const About: NextPage = () => {
                 <p className="eyebrow">Stacks & Capabilities</p>
                 {skillClusters.map((cluster) => (
                     <div key={cluster.title} className="accent-row">
-                        <span className="small-label">{cluster.title}</span>
+                        <span className="small-label">- {cluster.title}</span>
                         <span>{cluster.items.join(' · ')}</span>
                     </div>
                 ))}
