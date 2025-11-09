@@ -7,6 +7,8 @@ const SOCIAL_LINKS = [
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/",
+    srLabel: "LinkedIn profile",
+    className: "social-icon--linkedin",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <path
@@ -19,11 +21,27 @@ const SOCIAL_LINKS = [
   {
     label: "GitHub",
     href: "https://github.com/adrianarandac",
+    srLabel: "GitHub profile",
+    className: "social-icon--github",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <path
           fill="currentColor"
           d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48 0-.24-.01-.88-.01-1.72-2.78.6-3.37-1.34-3.37-1.34-.46-1.17-1.13-1.48-1.13-1.48-.92-.64.07-.62.07-.62 1.02.07 1.56 1.05 1.56 1.05.9 1.55 2.37 1.1 2.95.84.09-.66.35-1.1.64-1.35-2.22-.25-4.56-1.12-4.56-4.98 0-1.1.39-2 .1-2.7 0 0 .83-.26 2.72 1.02A9.44 9.44 0 0 1 12 7.8a9.4 9.4 0 0 1 2.48.33c1.89-1.28 2.72-1.02 2.72-1.02.55 1.38.19 2.4.09 2.7.62.67 1 1.58 1 2.67 0 3.88-2.35 4.72-4.59 4.97.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+        />
+      </svg>
+    ),
+  },
+  {
+    label: "Instagram",
+    href: "https://instagram.com/bettercalladri",
+    srLabel: "Instagram @bettercalladri",
+    className: "social-icon--instagram",
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path
+          fill="currentColor"
+          d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7Zm0 2h10c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3Zm11 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2ZM12 7.5A4.5 4.5 0 1 0 12 16.5 4.5 4.5 0 0 0 12 7.5Zm0 2A2.5 2.5 0 1 1 12 14a2.5 2.5 0 0 1 0-5Z"
         />
       </svg>
     ),
@@ -101,11 +119,11 @@ function Contact() {
                     href={social.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="social-icon"
+                    className={`social-icon ${social.className}`}
                     aria-label={social.label}
                   >
                     {social.icon}
-                    <span className="sr-only">{social.label}</span>
+                    <span className="sr-only">{social.srLabel}</span>
                   </Link>
                 </li>
               ))}

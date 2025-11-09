@@ -369,14 +369,14 @@ img {
 .contact-info,
 .contact-socials {
   display: flex;
-  flex-direction: column;
+  /*flex-direction: column;*/
   gap: 0.6rem;
   align-items: center;
 }
 
 .contact-email {
   text-decoration: none;
-  padding: 0.5rem 1.4rem;
+  /*padding: 0.5rem 1.4rem;*/
   border-radius: 999px;
   color: var(--text);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
@@ -385,7 +385,6 @@ img {
 
 .contact-email:hover {
   transform: translateY(-2px);
-  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45);
 }
 
 .contact-divider {
@@ -421,8 +420,8 @@ img {
 }
 
 .social-icon {
-  width: 48px;
-  height: 48px;
+  width: 35px;
+  height: 35px;
   border-radius: 999px;
   border: 1px solid var(--stroke);
   display: inline-flex;
@@ -430,7 +429,7 @@ img {
   justify-content: center;
   color: var(--text);
   background: rgba(255, 255, 255, 0.03);
-  transition: transform 200ms ease, border-color 200ms ease, background 200ms ease;
+  transition: transform 200ms ease;
 }
 
 .social-icon svg {
@@ -440,8 +439,31 @@ img {
 
 .social-icon:hover {
   transform: translateY(-2px);
-  border-color: var(--accent);
-  background: rgba(255, 240, 118, 0.12);
+}
+
+.social-icon--linkedin {
+  background: #0a66c2;
+  border-color: #0a66c2;
+  color: #f4f6fb;
+}
+
+.social-icon--github {
+  background: #1e232c;
+  border-color: #ffffff;
+  color: #f5f2eb;
+}
+
+.social-icon--instagram {
+  border: none;
+  color: #fff9f0;
+  background: radial-gradient(circle at 30% 30%, #feda75, #fa7e1e 45%, #d62976 65%, #962fbf 80%, #4f5bd5);
+}
+
+.social-icon--linkedin:hover,
+.social-icon--github:hover,
+.social-icon--instagram:hover {
+  border-color: transparent;
+  background-blend-mode: normal;
 }
 
 .sr-only {
@@ -476,7 +498,7 @@ img {
 
 .navbar-inner {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
   grid-template-areas: "brand center actions";
   align-items: center;
   padding: 1.1rem 4vw;
@@ -585,7 +607,7 @@ img {
 
 @media (min-width: 768px) {
   .navbar-inner {
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr auto 1fr;
   }
 
   .hero-grid {

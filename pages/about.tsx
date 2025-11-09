@@ -35,7 +35,7 @@ const skillClusters = [
   { title: "Infrastructure", items: ["AWS", "Terraform", "Kubernetes", "Docker", "Spinnaker"] },
   { title: "Observability", items: ["Datadog", "Tracing", "Dashboards"] },
   { title: "Interface", items: ["React", "Next.js", "Vue", "Tailwind"] },
-  { title: "Practices", items: ["TDD", "Lean delivery", "Calm comms"] },
+  { title: "Practices", items: ["Test Driven Development", "Domain Driven Design"] },
 ];
 
 const About: NextPage = () => {
