@@ -79,17 +79,19 @@ const About: NextPage = () => {
         </section>
 
         <section className="section-block experience-grid">
-          <div className="stack">
+          <div className="stack experience-stack">
             <p className="eyebrow">Experience</p>
-            {experience.map((item) => (
-              <article key={item.company} className="experience-item">
-                <p className="small-label">{item.timeframe}</p>
-                <h2>
-                 - {item.role}, <span className="accent"><i>{item.company}</i></span>
-                </h2>
-                <p className="muted">{item.summary}</p>
-              </article>
-            ))}
+            <div className="experience-timeline">
+              {experience.map((item) => (
+                <article key={item.company} className="experience-item timeline-item">
+                  <p className="small-label">{item.timeframe}</p>
+                  <h2>
+                   - {item.role}, <span className="accent"><i>{item.company}</i></span>
+                  </h2>
+                  <p className="muted">{item.summary}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
         <section className="section-block experience-grid">

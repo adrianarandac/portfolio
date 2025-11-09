@@ -291,16 +291,70 @@ img {
 }
 
 .experience-grid {
-    border-top: 1px solid var(--stroke);
+  border-top: 1px solid var(--stroke);
   gap: 1rem;
 }
 
+.experience-stack {
+  gap: 1.5rem;
+}
+
+.experience-timeline {
+  --timeline-line-offset: 0.85rem;
+  --timeline-content-offset: 2.8rem;
+  --timeline-dot-size: 14px;
+  position: relative;
+  padding-left: var(--timeline-content-offset);
+  margin-left: 0.4rem;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  left: var(--timeline-line-offset);
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    var(--accent) 0%,
+    color-mix(in srgb, var(--text) 18%, transparent) 90%
+  );
+  opacity: 0.75;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 0;
+  margin-bottom: 2rem;
+  padding-bottom: 1.3rem;
+  border-bottom: 1px dashed color-mix(in srgb, var(--text) 15%, transparent);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 0.35rem;
+  left: calc(var(--timeline-line-offset) - (var(--timeline-dot-size) / 2));
+  width: var(--timeline-dot-size);
+  height: var(--timeline-dot-size);
+  border-radius: 50%;
+  border: 2px solid var(--page);
+  background: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.04);
+}
+
 .experience-item {
-  border-left: 2px solid var(--accent);
-  padding-left: 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding-bottom: 0.2rem;
 }
 
 .language-list {
@@ -494,6 +548,12 @@ img {
 
 .navbar {
   border-bottom: 1px solid var(--stroke);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--page);
+  background: color-mix(in srgb, var(--page) 72%, transparent);
+  backdrop-filter: blur(29px);
 }
 
 .navbar-inner {
@@ -625,11 +685,6 @@ img {
       margin: 8vh 0;
   }
 
-  .experience-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 3rem;
-  }
-
   .project-grid {
     grid-template-columns: 1.3fr 0.7fr;
     align-items: center;
@@ -642,7 +697,7 @@ img {
   .nav-link.active::before {
     content: "";
     position: absolute;
-    bottom: 0;
+    top: -0.7rem;
     left: 0;
     right: 0;
     height: 2px;
