@@ -11,7 +11,7 @@ function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="contact-card">
+    <form onSubmit={handleSubmit} className="contact-form">
       <div className="form-grid">
         <div className="form-row">
           <label className="small-label" htmlFor="full-name">
@@ -26,7 +26,7 @@ function ContactForm() {
           <input className="input-minimal" type="email" name="_replyto" id="email-address" placeholder="you@email.com" required />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
         </div>
-        <div className="form-row">
+        <div className="form-row form-row--full">
           <label htmlFor="message" className="small-label">
             Your message
           </label>
@@ -56,33 +56,30 @@ function Contact() {
       </Head>
       <Navbar />
       <main className="layout stack-lg">
-        <section className="section-block contact-grid">
-          <div className="stack contact-card">
-            <p className="eyebrow">Say hello</p>
-            <h1>Questions? Comments? Let’s talk.</h1>
-            <p className="muted">
-              I keep communication lightweight and honest. Email me directly at{' '}
-              <a href="mailto:adrienaranda@gmail.com" className="link-underline accent">
-                adrienaranda@gmail.com
-              </a>{' '}
-              or drop your note below.
-            </p>
-            <div className="stack">
-              <Link href="adrian_aranda_resume.pdf" download="adrian_aranda_resume" className="accent-row">
-                <span className="small-label">Download CV</span>
-                <span className="accent">PDF</span>
-              </Link>
-              <Link href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="accent-row">
-                <span className="small-label">LinkedIn</span>
-                <span className="accent">/in/adrianaranda</span>
-              </Link>
-              <Link href="https://github.com/adrianarandac" target="_blank" rel="noreferrer" className="accent-row">
-                <span className="small-label">GitHub</span>
-                <span className="accent">@adrianarandac</span>
-              </Link>
-            </div>
+        <section className="section-block contact-stack">
+          <div className="contact-info">
+            <p className="eyebrow">Email:</p>
+            <a href="mailto:adrienaranda@gmail.com" className="contact-email">
+              adrienaranda@gmail.com
+            </a>
           </div>
+          <span className="contact-divider" aria-hidden="true" />
           <ContactForm />
+          <span className="contact-divider" aria-hidden="true" />
+          <div className="contact-socials">
+            <ul className="social-links">
+              <li>
+                <Link href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                  LinkedIn
+                </Link>
+              </li>
+              <li>
+                <Link href="https://github.com/adrianarandac" target="_blank" rel="noreferrer">
+                  GitHub
+                </Link>
+              </li>
+            </ul>
+          </div>
         </section>
       </main>
     </>
