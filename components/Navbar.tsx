@@ -33,17 +33,17 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
+        <button
+          type="button"
+          className="nav-toggle"
+          onClick={() => setOpen((prev) => !prev)}
+          aria-expanded={open}
+          aria-label="Toggle navigation"
+        >
+          Menu
+        </button>
         <div className="nav-actions">
           <ThemeToggle />
-          <button
-            type="button"
-            className="nav-toggle"
-            onClick={() => setOpen((prev) => !prev)}
-            aria-expanded={open}
-            aria-label="Toggle navigation"
-          >
-            Menu
-          </button>
         </div>
       </div>
       {open && (

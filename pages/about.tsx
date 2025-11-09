@@ -11,21 +11,21 @@ const experience = [
     company: "Pleo",
     timeframe: "Jun 2023 – Present · Barcelona",
     summary:
-      "Owning card-domain services in Java/Kotlin, evolving Terraform + Kubernetes stacks, and tightening observability so finance teams feel invisible tooling.",
+      "Owning card-domain services in Java/Kotlin, evolving Terraform + Kubernetes stacks, and improving observability so finance teams get seamless, reliable tooling.",
   },
   {
-    role: "Full Stack Software Engineer",
+    role: "Fullstack Software Engineer",
     company: "Glovo",
     timeframe: "2022 – 2023 · Barcelona",
     summary:
-      "Scaled courier-facing microservices, shipped event-driven pipelines consuming 2.5M+ events/day, and paired with UX to design minimal operator panels in Vue.",
+      "Scaled courier-facing microservices, shipped event driven pipelines consuming 2.5M+ events/day, and paired with UX to design minimal operator panels in Vue.",
   },
   {
-    role: "Back End Software Engineer",
+    role: "Backend Software Engineer",
     company: "Bolt",
     timeframe: "2021 – 2022 · Remote (US)",
     summary:
-      "Built crawlers and checkout simulators that ingested 400k+ products, and automated partner-store flows with headless Puppeteer for commerce experiments.",
+      "Built crawlers and checkout simulators that ingested 400k+ products, and automated partner-store flows with headless scrappers for commerce embedded marketing.",
   },
 ];
 
@@ -55,7 +55,7 @@ const About: NextPage = () => {
         <section className="section-block bio-grid">
           <div className="stack">
             <p className="eyebrow">Hey there,</p>
-            <h1>I’m Adrián, a backend engineer at Pleo.</h1>
+            <h1>I’m Adrián,<br/>a backend engineer at Pleo.</h1>
             <p className="muted">
               I’m a pragmatic engineer with a taste for concise UX. I’ve partnered with teams at{' '}
               <Link href="https://www.bolt.com" target="_blank" rel="noreferrer" className="link-underline accent">
