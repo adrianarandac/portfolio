@@ -100,59 +100,55 @@ const Projects = () => {
         <link rel="icon" href="/public/favicon.ico" />
       </Head>
       <Navbar />
-      <main className="layout stack-lg">
-        {/*<header className="section-block stack">*/}
-        {/*  <h1>Projects.</h1>*/}
-        {/*</header>*/}
-
-        <div role="tablist" aria-label="Projects" className="tab-list">
-          {projects.map((project) => (
+      <main className="layout projects-page">
+        <div role="tablist" aria-label="Projects" className="projects-selector">
+          {projects.map((project, index) => (
             <button
               key={project.slug}
               type="button"
               role="tab"
               aria-selected={project.slug === active}
-              className="tab-button"
+              className={`projects-selector-button ${project.slug === active ? "active" : ""}`}
               onClick={() => setActive(project.slug)}
             >
-              {project.label}
+              <span className="projects-selector-index">{String(index + 1).padStart(2, "0")}</span>
+              <span>{project.label}</span>
             </button>
           ))}
         </div>
 
-        <section aria-live="polite" className="tab-panel project-grid">
-          <div className="stack">
+        <section aria-live="polite" className="project-stage">
+          <div className="project-meta">
             <p className="eyebrow">{activeProject.eyebrow}</p>
             <h2>{activeProject.title}</h2>
             <p className="muted">{activeProject.description}</p>
-            <p className="muted">
-              Stack: <span className="accent">{activeProject.stack}</span>
-            </p>
-            <div className="link-strip">
-              <Link href={activeProject.source} target="_blank" rel="noreferrer" className="link-underline accent">
+            <div className="project-stack">
+              <p className="small-label">Stack</p>
+              <p>{activeProject.stack}</p>
+            </div>
+            <div className="project-links">
+              <Link href={activeProject.source} target="_blank" rel="noreferrer">
                 Source
               </Link>
-              <Link href={activeProject.live} target="_blank" rel="noreferrer" className="link-underline accent">
+              <Link href={activeProject.live} target="_blank" rel="noreferrer">
                 Live
               </Link>
             </div>
           </div>
-          <figure className="project-media">
+          <figure className="project-visual">
             {hasImages && (
-              <div className="media-frame">
-                <Image alt={`${activeProject.label} interface`} src={images[currentImageIndex]} className="project-image" />
-              </div>
+              <Image alt={`${activeProject.label} interface`} src={images[currentImageIndex]} className="project-visual-image" />
             )}
             {hasImages && images.length > 1 && (
-              <div className="accent-row">
-                <button type="button" onClick={() => handleCycle("prev")}>
-                  Prev
+              <div className="project-controls">
+                <button type="button" onClick={() => handleCycle("prev")} aria-label="View previous screenshot">
+                  ‹
                 </button>
                 <span className="small-label">
                   {currentImageIndex + 1}/{images.length}
                 </span>
-                <button type="button" onClick={() => handleCycle("next")}>
-                  Next
+                <button type="button" onClick={() => handleCycle("next")} aria-label="View next screenshot">
+                  ›
                 </button>
               </div>
             )}
