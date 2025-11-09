@@ -119,6 +119,7 @@ img {
   letter-spacing: 0.3em;
   font-size: 0.65rem;
   color: var(--muted);
+    white-space: nowrap;
 }
 
 .link-underline {
@@ -202,6 +203,7 @@ img {
   padding: 0.8rem 0;
   border-bottom: 1px solid rgb(62, 62, 62);
   font-size: 0.9rem;
+    align-items: center;
 }
 
 .grid-cards {
