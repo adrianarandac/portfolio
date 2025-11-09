@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 
@@ -10,6 +11,9 @@ const NAV_LINKS = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+
+  const isActive = (href: string) => router.pathname === href;
 
   return (
     <nav className="navbar">
@@ -19,7 +23,12 @@ const Navbar = () => {
         </Link>
         <div className="nav-links">
           {NAV_LINKS.map((link) => (
-            <Link key={link.href} href={link.href} className="nav-link">
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`nav-link ${isActive(link.href) ? "active" : ""}`}
+              aria-current={isActive(link.href) ? "page" : undefined}
+            >
               {link.label}
             </Link>
           ))}
@@ -40,7 +49,13 @@ const Navbar = () => {
       {open && (
         <div className="nav-mobile">
           {NAV_LINKS.map((link) => (
-            <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`nav-link ${isActive(link.href) ? "active" : ""}`}
+              aria-current={isActive(link.href) ? "page" : undefined}
+              onClick={() => setOpen(false)}
+            >
               {link.label}
             </Link>
           ))}

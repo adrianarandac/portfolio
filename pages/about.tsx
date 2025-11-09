@@ -38,8 +38,6 @@ const skillClusters = [
   { title: "Practices", items: ["TDD", "Lean delivery", "Calm comms"] },
 ];
 
-const languages = ["English · C2", "Spanish · Native", "Catalan · Native"];
-
 const About: NextPage = () => {
   return (
     <>
@@ -93,22 +91,17 @@ const About: NextPage = () => {
               </article>
             ))}
           </div>
-          <div className="stack">
-            <p className="eyebrow">Stacks & Capabilities</p>
-            {skillClusters.map((cluster) => (
-              <div key={cluster.title} className="accent-row">
-                <span className="small-label">{cluster.title}</span>
-                <span>{cluster.items.join(' · ')}</span>
-              </div>
-            ))}
-            <div className="language-list">
-              {languages.map((lang) => (
-                <span key={lang} className="accent-pill">
-                  {lang}
-                </span>
-              ))}
+        </section>
+        <section className="section-block experience-grid">
+            <div className="stack">
+                <p className="eyebrow">Stacks & Capabilities</p>
+                {skillClusters.map((cluster) => (
+                    <div key={cluster.title} className="accent-row">
+                        <span className="small-label">{cluster.title}</span>
+                        <span>{cluster.items.join(' · ')}</span>
+                    </div>
+                ))}
             </div>
-          </div>
         </section>
       </main>
     </>
