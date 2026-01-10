@@ -12,7 +12,6 @@ import daimmerGif from "../public/daimmer-macbook.png";
 export type EngineeringProject = {
   slug: string;
   label: string;
-  eyebrow: string;
   title: string;
   description: string;
   stack: string;
@@ -25,8 +24,7 @@ export const engineeringProjects: EngineeringProject[] = [
   {
     slug: "seven",
     label: "SEVEN",
-    eyebrow: "Project: SEVEN",
-    title: "Plan your next seven days with geolocation superpowers.",
+    title: "SEVEN: Plan your next 7 days.",
     description:
       "SEVEN is the way to realistically plan your free time for the next 7 days. This full-stack app revolves around geolocation thanks to Mapbox and the Google Maps API, along with the Geocoder library to transform coordinates to formatted addresses.",
     stack: "React / MongoDB / Mapbox / Tailwind / Google Cloud",
@@ -37,8 +35,7 @@ export const engineeringProjects: EngineeringProject[] = [
   {
     slug: "apipie",
     label: "Apipie",
-    eyebrow: "Project: Apipie",
-    title: "The collaborative recipe book.",
+    title: "APIPIE: The collaborative recipe book.",
     description:
       "Even though it's not as technically advanced as SEVEN, this project is my personal favourite because it was fun to build and also my first full stack app. The experience stays responsive, clean, and warm.",
     stack: "HTML / Express / Mongoose / Bootstrap",
@@ -49,8 +46,7 @@ export const engineeringProjects: EngineeringProject[] = [
   {
     slug: "daimmer",
     label: "Daimmer",
-    eyebrow: "Project: Daimmer",
-    title: "An eye-hand coordination game.",
+    title: "DAIMMER: An eye-hand coordination game.",
     description:
       "My first build: a keyboard + pointer reflex game where headless Puppeteer-tested flows simulate tiles, teaching me DOM control and timing curves.",
     stack: "HTML / Pure CSS / Express.js / Socket-style interactions",
