@@ -6,10 +6,10 @@ import Footer from "../components/Footer";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class" defaultTheme="night" enableSystem={false}>
-      <>
+      <div className="app-shell">
         <Component {...pageProps} />
         <Footer />
-      </>
+      </div>
     </ThemeProvider>
   );
 }
