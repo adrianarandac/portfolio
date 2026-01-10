@@ -207,14 +207,14 @@ img {
     transform: translate(19px, -50%);
 }
 .accent-row {
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
-    width: 95%;
-    gap: 1rem;
-    padding: 0.8rem 0;
-    border-bottom: 1px solid rgb(62, 62, 62);
-    font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+  width: 100%;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgb(62, 62, 62);
+  font-size: 0.9rem;
     align-items: center;
 }
 
@@ -297,6 +297,11 @@ img {
 
 .bio-grid h1 {
     font-size: clamp(1.7rem, 2.6vw, 2.6rem);
+}
+
+.cadence-split {
+  display: grid;
+  gap: 1.5rem;
 }
 
 .portrait-frame {
@@ -967,9 +972,14 @@ img {
         margin-top: 5vh;
     }
 
-    .project-stage {
-        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-    }
+  .project-stage {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  }
+
+  .cadence-split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
 
     .nav-links {
         display: flex;
