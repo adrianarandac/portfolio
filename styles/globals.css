@@ -729,9 +729,9 @@ img {
 }
 
 .footer-microlabel.is-visible {
-    opacity: 1;
-    color: var(--accent);
-    transform: translateY(-12px);
+  opacity: 1;
+  color: var(--accent);
+  transform: translateY(-12px);
 }
 
 .footer-socials {
@@ -772,21 +772,25 @@ img {
 }
 
 @media (max-width: 640px) {
-    .site-footer {
-        position: static;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-    }
+  .site-footer {
+    position: static;
+    align-items: center;
+    gap: 0.75rem;
+  }
 
-    .footer-contact {
-        align-self: flex-end;
-    }
+  .footer-contact {
+    align-self: center;
+  }
 
-    .footer-microlabel {
-        right: auto;
-        left: 0;
-    }
+  .footer-microlabel {
+    right: 50%;
+    left: auto;
+    transform: translate(50%, -8px);
+  }
+
+  .footer-microlabel.is-visible {
+    transform: translate(50%, -12px);
+  }
 }
 
 .form-grid {

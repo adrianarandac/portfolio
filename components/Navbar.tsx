@@ -4,7 +4,6 @@ import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 
 const NAV_LINKS = [
-  { href: "/about", label: "About" },
   { href: "/engineering", label: "Engineering" },
   { href: "/cadence", label: "Cadence" },
 ];
