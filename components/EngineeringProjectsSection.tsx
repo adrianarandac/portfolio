@@ -19,7 +19,10 @@ const EngineeringProjectsSection = ({
   compact = false,
 }: EngineeringProjectsSectionProps) => {
   const [active, setActive] = useState(() => {
-    if (initialSlug && engineeringProjects.some((project) => project.slug === initialSlug)) {
+    if (
+      initialSlug &&
+      engineeringProjects.some((project) => project.slug === initialSlug)
+    ) {
       return initialSlug;
     }
     return engineeringProjects[0]?.slug ?? "";
@@ -28,12 +31,14 @@ const EngineeringProjectsSection = ({
     engineeringProjects.reduce<Record<string, number>>((acc, project) => {
       acc[project.slug] = 0;
       return acc;
-    }, {})
+    }, {}),
   );
 
   const activeProject = useMemo(
-    () => engineeringProjects.find((project) => project.slug === active) ?? engineeringProjects[0],
-    [active]
+    () =>
+      engineeringProjects.find((project) => project.slug === active) ??
+      engineeringProjects[0],
+    [active],
   );
 
   if (!activeProject) return null;
@@ -48,7 +53,10 @@ const EngineeringProjectsSection = ({
     setImageIndexes((prev) => {
       const current = prev[activeProject.slug] ?? 0;
       const total = images.length;
-      const nextIndex = direction === "next" ? (current + 1) % total : (current - 1 + total) % total;
+      const nextIndex =
+        direction === "next"
+          ? (current + 1) % total
+          : (current - 1 + total) % total;
       return { ...prev, [activeProject.slug]: nextIndex };
     });
   };
@@ -67,16 +75,20 @@ const EngineeringProjectsSection = ({
               className={`projects-selector-button ${project.slug === active ? "active" : ""}`}
               onClick={() => setActive(project.slug)}
             >
-              <span className="projects-selector-index">{String(index + 1).padStart(2, "0")}</span>
+              <span className="projects-selector-index">
+                {String(index + 1).padStart(2, "0")}
+              </span>
               <span>{project.label}</span>
             </button>
           ))}
         </div>
       )}
 
-      <section aria-live="polite" className={`project-stage ${compact ? "project-stage--compact" : ""}`}>
+      <section
+        aria-live="polite"
+        className={`project-stage ${compact ? "project-stage--compact" : ""}`}
+      >
         <div className="project-meta">
-          <p className="eyebrow">{activeProject.eyebrow}</p>
           <TitleTag>{activeProject.title}</TitleTag>
           <p className="muted">{activeProject.description}</p>
           <div className="project-stack">
@@ -94,17 +106,29 @@ const EngineeringProjectsSection = ({
         </div>
         <figure className="project-visual">
           {hasImages && (
-            <Image alt={`${activeProject.label} interface`} src={images[currentImageIndex]} className="project-visual-image" />
+            <Image
+              alt={`${activeProject.label} interface`}
+              src={images[currentImageIndex]}
+              className="project-visual-image"
+            />
           )}
           {hasImages && images.length > 1 && (
             <div className="project-controls">
-              <button type="button" onClick={() => handleCycle("prev")} aria-label="View previous screenshot">
+              <button
+                type="button"
+                onClick={() => handleCycle("prev")}
+                aria-label="View previous screenshot"
+              >
                 {"<"}
               </button>
               <span className="small-label">
                 {currentImageIndex + 1}/{images.length}
               </span>
-              <button type="button" onClick={() => handleCycle("next")} aria-label="View next screenshot">
+              <button
+                type="button"
+                onClick={() => handleCycle("next")}
+                aria-label="View next screenshot"
+              >
                 {">"}
               </button>
             </div>
