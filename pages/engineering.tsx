@@ -31,12 +31,21 @@ const experience = [
 ];
 
 const skillClusters = [
-  { title: "Systems", items: ["Java/Kotlin", "Spring", "FastAPI", "Kafka", "Airflow"] },
+  {
+    title: "Systems",
+    items: ["Java/Kotlin", "Spring", "FastAPI", "Kafka", "Airflow"],
+  },
   { title: "Data", items: ["PySpark", "Data Mesh", "Event pipelines", "SQL"] },
-  { title: "Infrastructure", items: ["AWS", "Terraform", "Kubernetes", "Docker", "Spinnaker"] },
+  {
+    title: "Infrastructure",
+    items: ["AWS", "Terraform", "Kubernetes", "Docker", "Spinnaker"],
+  },
   { title: "Observability", items: ["Datadog", "Tracing", "Dashboards"] },
   { title: "Interface", items: ["React", "Next.js", "Vue", "Tailwind"] },
-  { title: "Practices", items: ["Test Driven Development", "Domain Driven Design"] },
+  {
+    title: "Practices",
+    items: ["Test Driven Development", "Domain Driven Design"],
+  },
 ];
 
 const Engineering: NextPage = () => {
@@ -57,24 +66,37 @@ const Engineering: NextPage = () => {
           <div className="stack">
             <p className="eyebrow">Hey there,</p>
             <h1>
-              I'm Adrian,
-              <br />
-              a backend engineer at Pleo.
+              I’m Adrián,
+              <br />a backend engineer at Pleo.
             </h1>
             <p className="muted">
-              I'm a pragmatic engineer with a taste for concise UX. I've partnered with teams at{" "}
-              <Link href="https://www.bolt.com" target="_blank" rel="noreferrer" className="link-underline accent">
+              I'm a pragmatic engineer with a taste for concise UX. I've
+              partnered with teams at{" "}
+              <Link
+                href="https://www.bolt.com"
+                target="_blank"
+                rel="noreferrer"
+                className="link-underline accent"
+              >
                 Bolt
               </Link>
               ,{" "}
-              <Link href="https://www.glovoapp.com" target="_blank" rel="noreferrer" className="link-underline accent">
+              <Link
+                href="https://www.glovoapp.com"
+                target="_blank"
+                rel="noreferrer"
+                className="link-underline accent"
+              >
                 Glovo
               </Link>
-              , and now <span className="accent">Pleo</span>, shipping JVM services, payments, and tooling for product squads.
+              , and now <span className="accent">Pleo</span>, shipping JVM
+              services, payments, and tooling for product squads.
             </p>
             <p className="muted">
-              Track record covers microservices, data pipelines, infrastructure-as-code, and measured interfaces. <br />
-              When not coding, you'll find me swimming and recording music at my home studio.
+              Track record covers microservices, data pipelines,
+              infrastructure-as-code, and measured interfaces. <br />
+              When not coding, you'll find me swimming and recording music at my
+              home studio.
             </p>
           </div>
           <figure className="portrait-frame">
@@ -89,7 +111,10 @@ const Engineering: NextPage = () => {
             <h2>Experience</h2>
             <div className="experience-timeline">
               {experience.map((item) => (
-                <article key={item.company} className="experience-item timeline-item">
+                <article
+                  key={item.company}
+                  className="experience-item timeline-item"
+                >
                   <p className="small-label">{item.timeframe}</p>
                   <h2>
                     - {item.role}{" "}
@@ -103,7 +128,11 @@ const Engineering: NextPage = () => {
             </div>
           </div>
         </section>
-        <EngineeringProjectsSection heading="Engineering projects" titleLevel="h3" compact />
+        <EngineeringProjectsSection
+          heading="Engineering projects"
+          titleLevel="h3"
+          compact
+        />
 
         <section className="section-block experience-grid">
           <div className="stack">
