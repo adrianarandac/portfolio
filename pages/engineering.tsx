@@ -65,10 +65,7 @@ const Engineering: NextPage = () => {
         <section className="section-block bio-grid">
           <div className="stack">
             <p className="eyebrow">Hey there,</p>
-            <h1>
-              I’m Adrián,
-              <br />a backend engineer at Pleo.
-            </h1>
+            <h1>I’m Adrián, a backend engineer at Pleo.</h1>
             <p className="muted">
               I'm a pragmatic engineer with a taste for concise UX. I've
               partnered with teams at{" "}

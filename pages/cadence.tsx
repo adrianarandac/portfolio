@@ -26,7 +26,7 @@ const Cadence: NextPage = () => {
       <main className="layout stack-lg">
         <section className="section-block stack">
           <h1>Cadence</h1>
-          <p className="small-label">A music management project with an editorial format.</p>
+          <p className="small-label allow-wrap">A music management project with an editorial format.</p>
           <p className="muted">A calm system for organizing music work.</p>
           <div className="link-strip">
             <span>CADENCE PERSONA</span>
@@ -40,7 +40,9 @@ const Cadence: NextPage = () => {
             <article className="stat-card stack">
               <p className="eyebrow">App</p>
               <p className="muted">Desktop + web music management.</p>
-              <p className="small-label">Built with Tauri + React, backed by Supabase, deployed on Vercel at itscadence.com.</p>
+              <p className="small-label allow-wrap">
+                Built with Tauri + React, backed by Supabase, deployed on Vercel at itscadence.com.
+              </p>
             </article>
             <article className="stat-card stack">
               <p className="eyebrow">Core</p>
