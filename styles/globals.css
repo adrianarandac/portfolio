@@ -319,17 +319,20 @@ img {
 }
 
 .cadence-hero-link {
-  font-family: "Fraunces", "Cormorant SC", "Ibarra Real Nova", serif;
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  display: block;
   text-decoration: none;
-  color: var(--text);
-  transition: color 200ms ease;
+  transition: transform 200ms ease;
 }
 
 .cadence-hero-link:hover {
-  color: var(--accent);
+  transform: scale(1.02);
+}
+
+.cadence-hero-logo {
+  width: min(80vw, 800px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 

@@ -1,9 +1,20 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import Navbar from "../components/Navbar";
 
 const Cadence: NextPage = () => {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const logoSrc = theme === "night" ? "/logos/logo-typo-cadence-white.svg" : "/logos/logo-typo-cadence-black.svg";
+
   return (
     <>
       <Head>
@@ -33,7 +44,13 @@ const Cadence: NextPage = () => {
           rel="noreferrer"
           className="cadence-hero-link"
         >
-          CADENCE
+          {mounted && (
+            <img
+              src={logoSrc}
+              alt="Cadence Logo"
+              className="cadence-hero-logo"
+            />
+          )}
         </Link>
       </main>
     </>
