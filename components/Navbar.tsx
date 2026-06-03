@@ -5,12 +5,14 @@ import ThemeToggle from "./ThemeToggle";
 
 const NAV_LINKS = [
   { href: "/engineering", label: "Engineering" },
+  { href: "/kin", label: "KIN" },
   { href: "/cadence", label: "Cadence" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
+  const isKin = router.pathname.startsWith("/kin");
 
   const isActive = (href: string) =>
     router.pathname === href || (href === "/engineering" && router.pathname.startsWith("/engineering"));
@@ -34,7 +36,7 @@ const Navbar = () => {
           ))}
         </div>
         <div className="nav-actions">
-          <ThemeToggle />
+          {!isKin && <ThemeToggle />}
           <button
             type="button"
             className="nav-toggle"
