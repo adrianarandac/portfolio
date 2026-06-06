@@ -185,13 +185,12 @@ const Kin: NextPage = () => {
           <div className="kin-body">
             <header className="kin-hero">
               <div className="kin-lockup kin-lockup--row">
-                <Image
+                <img
                   src="/kin-app-icon.png"
                   alt="KIN app icon"
                   width={120}
                   height={120}
                   className="kin-app-icon kin-app-icon--row"
-                  priority
                 />
                 <h1 className="kin-logo">KIN</h1>
               </div>

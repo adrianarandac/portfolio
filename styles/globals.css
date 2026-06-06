@@ -364,14 +364,13 @@ img {
 .kin-app-icon {
     width: 100%;
     height: auto;
-    border-radius: 42px;
+    border-radius: 18%;
     box-shadow: 0 12px 30px rgba(26, 48, 18, 0.12);
 }
 
 .kin-app-icon--row {
     width: auto;
     height: clamp(1rem, 5vw, 6rem);
-    border-radius: 18;
     max-width: none;
 }
 

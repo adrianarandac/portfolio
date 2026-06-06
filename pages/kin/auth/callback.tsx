@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
@@ -132,13 +132,12 @@ const KinAuthCallbackPage: NextPage = () => {
                   className="kin-app-icon-wrap"
                   style={logoWidth ? { width: `${logoWidth}px` } : undefined}
                 >
-                  <Image
+                  <img
                     src="/kin-app-icon.png"
                     alt="KIN app icon"
                     width={120}
                     height={120}
                     className="kin-app-icon"
-                    priority
                   />
                 </div>
                 <h1 ref={logoRef} className="kin-logo">
