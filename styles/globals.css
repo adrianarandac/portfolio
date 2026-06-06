@@ -340,6 +340,12 @@ img {
     gap: 0.45rem;
 }
 
+.kin-lockup--row {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.9rem;
+}
+
 .kin-app-icon-wrap {
     display: flex;
     justify-content: center;
@@ -348,7 +354,6 @@ img {
 .kin-logo {
     font-family: "Cormorant Garamond", "Ibarra Real Nova", serif;
     font-weight: 1000;
-    padding-left: 15;
     font-size: clamp(3.5rem, 10vw, 6rem);
     line-height: 1;
     letter-spacing: 0.2em;
@@ -361,6 +366,13 @@ img {
     height: auto;
     border-radius: 42px;
     box-shadow: 0 12px 30px rgba(26, 48, 18, 0.12);
+}
+
+.kin-app-icon--row {
+    width: auto;
+    height: clamp(1rem, 5vw, 6rem);
+    border-radius: 18;
+    max-width: none;
 }
 
 .kin-ornament {

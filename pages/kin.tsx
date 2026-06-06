@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 
 type AuthNotice = {
@@ -137,8 +137,6 @@ const Kin: NextPage = () => {
   const { setTheme } = useTheme();
   const [activeIndex, setActiveIndex] = useState(0);
   const [authNotice, setAuthNotice] = useState<AuthNotice>(null);
-  const [logoWidth, setLogoWidth] = useState<number | null>(null);
-  const logoRef = useRef<HTMLHeadingElement | null>(null);
 
   useEffect(() => {
     setTheme("light");
@@ -161,23 +159,6 @@ const Kin: NextPage = () => {
 
     const nextUrl = `${window.location.pathname}${window.location.search}`;
     window.history.replaceState({}, document.title, nextUrl);
-  }, []);
-
-  useEffect(() => {
-    function syncLogoWidth() {
-      if (!logoRef.current) {
-        return;
-      }
-
-      setLogoWidth(logoRef.current.getBoundingClientRect().width);
-    }
-
-    syncLogoWidth();
-    window.addEventListener("resize", syncLogoWidth);
-
-    return () => {
-      window.removeEventListener("resize", syncLogoWidth);
-    };
   }, []);
 
   return (
@@ -203,23 +184,16 @@ const Kin: NextPage = () => {
         <section className="kin-content">
           <div className="kin-body">
             <header className="kin-hero">
-              <div className="kin-lockup">
-                <div
-                  className="kin-app-icon-wrap"
-                  style={logoWidth ? { width: `${logoWidth}px` } : undefined}
-                >
-                  <Image
-                    src="/kin-app-icon.png"
-                    alt="KIN app icon"
-                    width={120}
-                    height={120}
-                    className="kin-app-icon"
-                    priority
-                  />
-                </div>
-                <h1 ref={logoRef} className="kin-logo">
-                  KIN
-                </h1>
+              <div className="kin-lockup kin-lockup--row">
+                <Image
+                  src="/kin-app-icon.png"
+                  alt="KIN app icon"
+                  width={120}
+                  height={120}
+                  className="kin-app-icon kin-app-icon--row"
+                  priority
+                />
+                <h1 className="kin-logo">KIN</h1>
               </div>
             </header>
 
