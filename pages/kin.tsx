@@ -3,8 +3,14 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar from "../components/Navbar";
+
+type AuthNotice = {
+  kind: "success" | "error";
+  title: string;
+  description: string;
+} | null;
 
 const features = [
   {
@@ -82,9 +88,57 @@ const screenshots = [
   "/kin-screenshot-5.png",
 ];
 
+function getAuthNoticeFromLocation() {
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  const hash = window.location.hash.startsWith("#")
+    ? window.location.hash.slice(1)
+    : window.location.hash;
+  const hashParams = new URLSearchParams(hash);
+  const searchParams = new URLSearchParams(window.location.search);
+  const params = hash ? hashParams : searchParams;
+  const errorCode = params.get("error_code");
+  const errorDescription = params.get("error_description");
+  const error = params.get("error");
+  const type = params.get("type");
+  const hasAuthTokens =
+    params.has("access_token") ||
+    params.has("refresh_token") ||
+    params.has("code");
+
+  if (error || errorDescription) {
+    return {
+      kind: "error" as const,
+      title:
+        errorCode === "otp_expired"
+          ? "This confirmation link expired."
+          : "We couldn't confirm that link.",
+      description:
+        errorDescription?.replace(/\+/g, " ") ??
+        "Please request a fresh confirmation email and try again.",
+    };
+  }
+
+  if (type === "signup" || hasAuthTokens) {
+    return {
+      kind: "success" as const,
+      title: "Email confirmed.",
+      description:
+        "Your KIN email is confirmed.</br> Return to the app and sign in to continue.",
+    };
+  }
+
+  return null;
+}
+
 const Kin: NextPage = () => {
   const { setTheme } = useTheme();
   const [activeIndex, setActiveIndex] = useState(0);
+  const [authNotice, setAuthNotice] = useState<AuthNotice>(null);
+  const [logoWidth, setLogoWidth] = useState<number | null>(null);
+  const logoRef = useRef<HTMLHeadingElement | null>(null);
 
   useEffect(() => {
     setTheme("light");
@@ -96,6 +150,36 @@ const Kin: NextPage = () => {
     }, 6000);
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    const nextNotice = getAuthNoticeFromLocation();
+    if (!nextNotice) {
+      return;
+    }
+
+    setAuthNotice(nextNotice);
+
+    const nextUrl = `${window.location.pathname}${window.location.search}`;
+    window.history.replaceState({}, document.title, nextUrl);
+  }, []);
+
+  useEffect(() => {
+    function syncLogoWidth() {
+      if (!logoRef.current) {
+        return;
+      }
+
+      setLogoWidth(logoRef.current.getBoundingClientRect().width);
+    }
+
+    syncLogoWidth();
+    window.addEventListener("resize", syncLogoWidth);
+
+    return () => {
+      window.removeEventListener("resize", syncLogoWidth);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -119,8 +203,35 @@ const Kin: NextPage = () => {
         <section className="kin-content">
           <div className="kin-body">
             <header className="kin-hero">
-              <h1 className="kin-logo">KIN</h1>
+              <div className="kin-lockup">
+                <div
+                  className="kin-app-icon-wrap"
+                  style={logoWidth ? { width: `${logoWidth}px` } : undefined}
+                >
+                  <Image
+                    src="/kin-app-icon.png"
+                    alt="KIN app icon"
+                    width={120}
+                    height={120}
+                    className="kin-app-icon"
+                    priority
+                  />
+                </div>
+                <h1 ref={logoRef} className="kin-logo">
+                  KIN
+                </h1>
+              </div>
             </header>
+
+            {authNotice ? (
+              <section
+                className={`kin-auth-notice kin-auth-notice--${authNotice.kind}`}
+                aria-live="polite"
+              >
+                <h2>{authNotice.title}</h2>
+                <p>{authNotice.description}</p>
+              </section>
+            ) : null}
 
             <section className="kin-section">
               <p>
