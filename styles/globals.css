@@ -324,7 +324,26 @@ img {
     background: var(--page);
     color: var(--text);
     font-family: "Inter", "Roboto", system-ui, sans-serif;
-    min-height: 100vh;
+    min-height: 100svh;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.kin-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: var(--page) url("/kin-background.png") center / cover no-repeat;
+}
+
+@media (max-width: 767px) {
+    .kin-page::before {
+        background: var(--page) url("/mobile-kin-background.png") center top /
+            cover no-repeat;
+    }
 }
 
 .kin-hero {
@@ -352,13 +371,14 @@ img {
 }
 
 .kin-logo {
-    font-family: "Cormorant Garamond", "Ibarra Real Nova", serif;
+    font-family: "Fraunces", serif;
     font-weight: 1000;
-    font-size: clamp(3.5rem, 10vw, 6rem);
+    font-size: clamp(3.5rem, 10vw, 5rem);
     line-height: 1;
     letter-spacing: 0.2em;
-    color: #3f5743;
+    color: #244728;
     margin: 0;
+    padding-left: 10px;
 }
 
 .kin-app-icon {
@@ -404,16 +424,15 @@ img {
 .kin-content {
     width: min(1100px, 92vw);
     margin: 0 auto;
-    padding: clamp(2rem, 6vw, 4rem) 0 4rem;
+    padding-top: clamp(3.25rem, 6svh, 4.25rem);
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
 }
 
 .kin-body {
     display: flex;
     flex-direction: column;
-    gap: clamp(1.5rem, 3vw, 2.5rem);
+    gap: clamp(0.85rem, 1.8vw, 1.35rem);
 }
 
 .kin-callback {
@@ -453,7 +472,7 @@ img {
 
 .kin-auth-notice h2 {
     margin: 0;
-    font-family: "Cormorant Garamond", "Ibarra Real Nova", serif;
+    font-family: "Fraunces", serif;
     font-size: 1.45rem;
     line-height: 1.1;
     color: #3f5743;
@@ -477,10 +496,33 @@ img {
     .kin-callback {
         grid-column: 1 / -1;
     }
+
+    .kin-content {
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(1.25rem, 3vw, 3rem);
+        align-items: start;
+        min-height: 100svh;
+        align-content: center;
+        padding-top: clamp(3rem, 5svh, 4rem);
+        padding-bottom: clamp(1rem, 2svh, 1.5rem);
+    }
+
+    .kin-body {
+        margin-top: clamp(1rem, 2.5vw, 2.5rem);
+    }
+
+    .kin-showcase {
+        position: sticky;
+        top: 0;
+    }
+
+    .kin-screenshot {
+        max-width: min(32vw, 360px);
+    }
 }
 
 .kin-section h2 {
-    font-family: "Cormorant Garamond", "Ibarra Real Nova", serif;
+    font-family: "Fraunces", serif;
     font-weight: 600;
     font-size: 1.4rem;
     color: #3f5743;
@@ -497,73 +539,159 @@ img {
     margin: 0;
 }
 
+.kin-section--features {
+    border: 1px solid rgba(47, 59, 47, 0.12);
+    border-radius: 1.5rem;
+    padding: 1.1rem 1.1rem 1.15rem;
+    background: rgba(255, 255, 255, 0.48);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 18px 40px rgba(32, 39, 31, 0.07);
+}
+
+.kin-section--features h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0 0 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.26em;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #27432a;
+}
+
+.kin-section--features h2::before,
+.kin-section--features h2::after {
+    content: "";
+    flex: 1 1 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(200, 160, 90, 0.1), #c8a05a);
+}
+
+.kin-section--features h2::after {
+    background: linear-gradient(90deg, #c8a05a, rgba(200, 160, 90, 0.1));
+}
+
+.kin-section--features h2 span {
+    flex-shrink: 0;
+}
+
 .kin-showcase {
     display: grid;
     justify-items: center;
     align-items: start;
-    /*gap: 1rem;*/
+    position: relative;
+    isolation: isolate;
+    padding: clamp(0.6rem, 1.5vw, 1.1rem) 0 0;
+}
+
+.kin-showcase::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    width: min(20vw, 420px);
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 30% 28%,
+        #fff 0%,
+        #102410 74%,
+        #050805 100%
+    );
+    opacity: 0.3;
+    filter: blur(0.5px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.kin-showcase::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    width: min(36vw, 420px);
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    padding: 0.45rem;
+    background: linear-gradient(135deg, #f8e7a8 0%, #d7ad4a 42%, #8a6617 100%);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .kin-screenshot {
     grid-area: 1 / 1;
     width: 100%;
-    max-width: 360px;
+    max-width: 400px;
     height: auto;
     display: block;
     opacity: 0;
     transition: opacity 800ms ease;
+    position: relative;
+    z-index: 2;
 }
 
 .kin-screenshot--active {
     opacity: 1;
 }
 
-.kin-dots {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-}
-
-.kin-dot {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background: rgba(138, 151, 133, 0.4);
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    transition: background 200ms ease;
-}
-
-.kin-dot--active {
-    background: #c8a05a;
-}
-
-.kin-dot:hover {
-    background: rgba(138, 151, 133, 0.7);
-}
-
-.kin-dot--active:hover {
-    background: #c8a05a;
-}
-
 @media (max-width: 767px) {
+    .kin-page {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .kin-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding-top: 5.5rem;
+        padding-bottom: 1rem;
+    }
+
     .kin-body {
         display: contents;
     }
 
     .kin-hero {
         order: 0;
-    }
-
-    .kin-section:first-of-type {
-        order: 1;
         text-align: center;
     }
 
+    .kin-lockup--row {
+        gap: 1.1rem;
+    }
+
+    .kin-logo {
+        font-size: clamp(3.9rem, 12vw, 4.8rem);
+    }
+
+    .kin-app-icon--row {
+        width: 80px;
+        height: 80px;
+    }
+
     .kin-showcase {
+        order: 1;
+        padding-top: 0.25rem;
+    }
+
+    .kin-section:first-of-type {
         order: 2;
-        padding-top: 0;
+        text-align: center;
+    }
+
+    .kin-section--features {
+        padding: 1rem 1rem 1.05rem;
+        border-radius: 1.35rem;
+        background: rgba(255, 255, 255, 0.56);
     }
 
     .kin-section:last-of-type,
@@ -574,30 +702,51 @@ img {
 
     .kin-features {
         justify-items: center;
+        grid-template-columns: 1fr;
     }
 
     .kin-footer {
         order: 4;
-    }
-
-    .kin-hero {
-        text-align: center;
+        position: static;
+        left: auto;
+        bottom: auto;
+        transform: none;
+        width: 100%;
+        max-width: none;
+        margin-top: 0.5rem;
+        padding-bottom: 0.75rem;
     }
 
     .kin-screenshot {
-        max-width: 220px;
+        max-width: 284px;
+    }
+
+    .kin-showcase::before,
+    .kin-showcase::after {
+        width: min(76vw, 284px);
     }
 }
 
 @media (min-width: 768px) {
     .kin-content {
         grid-template-columns: 1fr 1fr;
-        gap: clamp(2rem, 5vw, 4rem);
+        gap: clamp(1.25rem, 3vw, 3rem);
         align-items: start;
     }
 
     .kin-showcase {
         position: sticky;
+        top: clamp(0.25rem, 0.5vh, 0.75rem);
+        margin-left: clamp(1.5rem, 3vw, 3rem);
+    }
+
+    .kin-screenshot {
+        max-width: min(36vw, 420px);
+    }
+
+    .kin-showcase::before,
+    .kin-showcase::after {
+        width: min(36vw, 420px);
     }
 }
 
@@ -613,9 +762,15 @@ img {
     }
 }
 
+@media (max-width: 767px) {
+    .kin-features {
+        grid-template-columns: 1fr;
+    }
+}
+
 .kin-feature-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.75rem;
     font-family: "Inter", "Roboto", sans-serif;
     font-size: 0.9rem;
@@ -625,15 +780,22 @@ img {
 
 .kin-feature-icon {
     flex-shrink: 0;
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 2.35rem;
+    height: 2.35rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.6rem;
     color: #c8a05a;
+    background: transparent;
+    border: 1px solid rgba(200, 160, 90, 0.22);
+    margin-top: 0.05rem;
 }
 
 .kin-feature-icon svg {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 1.35rem;
+    height: 1.35rem;
 }
 
 .kin-tech-list {
@@ -675,26 +837,82 @@ img {
 }
 
 .kin-footer {
-    grid-column: 1 / -1;
-    text-align: center;
+    position: fixed;
+    left: 50%;
+    bottom: clamp(0.9rem, 2vw, 1.5rem);
+    transform: translateX(-50%);
     font-family: "Inter", "Roboto", sans-serif;
-    font-size: 0.75rem;
-    color: #76806f;
-    padding-top: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    width: auto;
+    max-width: calc(100vw - 2rem);
+    z-index: 20;
 }
 
-.kin-footer-link {
-    color: #76806f;
+.kin-footer-pill {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.55rem 0.95rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #5e6a58;
+    background: rgba(248, 244, 232, 0.72);
+    border: 1px solid rgba(94, 106, 88, 0.16);
+    backdrop-filter: blur(10px);
     text-decoration: none;
-    transition: color 200ms ease;
+    transition:
+        color 200ms ease,
+        border-color 200ms ease,
+        background 200ms ease,
+        transform 200ms ease;
 }
 
-.kin-footer-link:hover {
-    color: #c8a05a;
+.kin-footer-pill--link:hover {
+    color: #27432a;
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(39, 67, 42, 0.22);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 767px) {
+    .kin-page {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .kin-content {
+        gap: 1.25rem;
+        padding-bottom: 1rem;
+    }
+
+    .kin-features {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .kin-feature-item {
+        align-items: center;
+    }
+
+    .kin-feature-icon {
+        margin-top: 0;
+    }
+
+    .kin-page .kin-footer {
+        position: static;
+        left: auto;
+        bottom: auto;
+        transform: none;
+        width: 100%;
+        max-width: none;
+        margin-top: 0.5rem;
+        padding-bottom: 0.75rem;
+    }
 }
 
 /* ---------- KIN Privacy Policy ---------- */
@@ -728,7 +946,7 @@ img {
 }
 
 .kin-privacy h1 {
-    font-family: "Cormorant Garamond", "Ibarra Real Nova", serif;
+    font-family: "Fraunces", serif;
     font-weight: 700;
     font-size: clamp(1.8rem, 4vw, 2.4rem);
     color: #3f5743;
@@ -752,7 +970,7 @@ img {
 }
 
 .kin-privacy h2 {
-    font-family: "Cormorant Garamond", "Ibarra Real Nova", serif;
+    font-family: "Fraunces", serif;
     font-weight: 600;
     font-size: 1.3rem;
     color: #3f5743;
@@ -763,7 +981,7 @@ img {
 }
 
 .kin-privacy h3 {
-    font-family: "Cormorant Garamond", "Ibarra Real Nova", serif;
+    font-family: "Fraunces", serif;
     font-weight: 600;
     font-size: 1.05rem;
     color: #5e7b5f;
@@ -1323,6 +1541,18 @@ img {
     border-color: var(--accent);
 }
 
+.app-shell--kin .site-footer {
+    display: none;
+}
+
+.app-shell--kin .navbar {
+    position: fixed;
+    inset: 0 0 auto 0;
+    background: color-mix(in srgb, var(--page) 82%, white);
+    border-bottom: 1px solid var(--stroke);
+    backdrop-filter: blur(16px);
+}
+
 @media (max-width: 640px) {
     .site-footer {
         position: static;
@@ -1366,7 +1596,7 @@ img {
     top: 0;
     z-index: 999;
     background: var(--page);
-    background: color-mix(in srgb, var(--page) 75%, rgba(0, 0, 0, 0.2));
+    background: color-mix(in srgb, var(--page) 82%, white);
     backdrop-filter: blur(16px);
 }
 
