@@ -918,16 +918,21 @@ img {
 /* ---------- KIN Privacy Policy ---------- */
 
 .kin-privacy {
-    max-width: min(680px, 92vw);
-    margin: 0 auto;
-    padding: clamp(3rem, 8vw, 5rem) clamp(1.25rem, 5vw, 4rem)
-        clamp(3rem, 8vw, 5rem);
+    max-width: min(780px, 92vw);
+    margin: clamp(1.5rem, 5vw, 4rem) auto;
+    padding: clamp(2rem, 5vw, 4rem);
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 28px;
+    box-shadow: 0 28px 70px rgba(24, 39, 19, 0.12);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    overflow: hidden;
 }
 
 @media (min-width: 768px) {
     .kin-privacy {
-        padding: clamp(3rem, 8vw, 5rem) clamp(2.5rem, 6vw, 4rem)
-            clamp(3rem, 8vw, 5rem);
+        padding: clamp(2.5rem, 5vw, 4.5rem);
     }
 }
 
@@ -935,7 +940,7 @@ img {
     display: inline-block;
     font-family: "Inter", "Roboto", sans-serif;
     font-size: 0.85rem;
-    color: #76806f;
+    color: #66735f;
     text-decoration: none;
     margin-bottom: 2rem;
     transition: color 200ms ease;
@@ -957,7 +962,7 @@ img {
 .kin-privacy-date {
     font-family: "Inter", "Roboto", sans-serif;
     font-size: 0.85rem;
-    color: #8a9785;
+    color: #7d8a77;
     margin: 0 0 2.5rem;
 }
 
@@ -993,7 +998,7 @@ img {
     font-weight: 400;
     font-size: 0.95rem;
     line-height: 1.75;
-    color: #2f3b2f;
+    color: #2b362b;
     margin: 0 0 0.85rem;
 }
 
@@ -1003,7 +1008,7 @@ img {
     font-family: "Inter", "Roboto", sans-serif;
     font-size: 0.95rem;
     line-height: 1.75;
-    color: #2f3b2f;
+    color: #2b362b;
 }
 
 .kin-privacy li {
@@ -1024,18 +1029,27 @@ img {
     color: #b38a48;
 }
 
-.kin-privacy-footer {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(47, 59, 47, 0.1);
-}
-
 .kin-privacy-footer a {
     font-family: "Inter", "Roboto", sans-serif;
     font-size: 0.85rem;
     color: #76806f;
     text-decoration: none;
     transition: color 200ms ease;
+}
+
+.kin-privacy-footer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(47, 59, 47, 0.1);
+}
+
+.kin-terms-uppercase {
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
 }
 
 .kin-privacy-footer a:hover {

@@ -300,12 +300,17 @@ const Kin: NextPage = () => {
           </div>
 
           <footer className="kin-footer">
-            <span className="kin-footer-pill">&copy; Adrian Aranda</span>
             <Link
               href="/kin/privacy"
               className="kin-footer-pill kin-footer-pill--link"
             >
               Privacy Policy
+            </Link>
+            <Link
+              href="/kin/terms"
+              className="kin-footer-pill kin-footer-pill--link"
+            >
+              Terms of Use
             </Link>
           </footer>
         </section>
