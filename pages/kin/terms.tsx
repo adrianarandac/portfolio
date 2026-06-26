@@ -288,7 +288,8 @@ const KinTerms: NextPage = () => {
             <p>
               The Service may depend on or integrate with third-party products
               or services, including app stores, cloud hosting, mapping
-              services, authentication providers, and AI providers.
+              services, authentication providers, AI providers, and error
+              monitoring services such as Sentry.
             </p>
             <p>
               Third-party services are governed by their own terms and policies.

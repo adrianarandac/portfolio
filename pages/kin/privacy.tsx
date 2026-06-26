@@ -98,8 +98,12 @@ const KinPrivacy: NextPage = () => {
               </li>
             </ul>
             <p>
-              At the time of writing, the Kin codebase does not include a
-              dedicated third-party analytics SDK or crash reporting SDK.
+              Kin uses Sentry for crash reporting and application reliability
+              monitoring. When an error occurs, Sentry may receive technical
+              data such as device model, operating system, app version, build
+              number, environment, and a pseudonymous user identifier. We
+              configure Sentry to avoid sending email addresses, notes, raw
+              image data, precise coordinates, or other sensitive content.
             </p>
 
             <h3>1.3 Information From Third Parties</h3>
@@ -195,10 +199,11 @@ const KinPrivacy: NextPage = () => {
               <li>Google Gemini</li>
               <li>Mapbox</li>
               <li>MapTiler</li>
+              <li>Sentry</li>
             </ul>
             <p>
               These providers help us operate authentication, storage, backend
-              processing, mapping, and geocoding features.
+              processing, mapping, geocoding, and error monitoring features.
             </p>
 
             <h3>4.2 Legal Requirements</h3>
