@@ -269,20 +269,37 @@ const Kin: NextPage = () => {
               </div>
             </section>
 
-            <Link
-              href="https://play.google.com/store/apps/details?id=com.adrianaranda.kin"
-              target="_blank"
-              rel="noreferrer"
-              className="kin-play-badge"
-            >
-              <Image
-                src="/play-store.png"
-                alt="Get it on Google Play"
-                width={260}
-                height={83}
-                priority
-              />
-            </Link>
+            <div className="kin-download-badges">
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.adrianaranda.kin"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="kin-download-badge"
+              >
+                <Image
+                  className="kin-download-badge-image kin-download-badge-image--google-play"
+                  src="/play-store.png"
+                  alt="Get it on Google Play"
+                  width={260}
+                  height={83}
+                  priority
+                />
+              </Link>
+              <Link
+                href="https://apps.apple.com/en/app/kin-animal-identifier/id6777401185"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="kin-download-badge"
+              >
+                <Image
+                  className="kin-download-badge-image"
+                  src="/app-store.svg.png"
+                  alt="Download on the App Store"
+                  width={260}
+                  height={77}
+                />
+              </Link>
+            </div>
           </div>
 
           <div className="kin-showcase">

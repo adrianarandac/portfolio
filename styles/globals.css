@@ -695,7 +695,7 @@ img {
     }
 
     .kin-section:last-of-type,
-    .kin-play-badge {
+    .kin-download-badges {
         order: 3;
         text-align: center;
     }
@@ -804,36 +804,35 @@ img {
     gap: 0.5rem;
 }
 
-.kin-play-badge {
+.kin-download-badges {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    width: min(290px, 100%);
+    margin-inline: auto;
     padding-top: 20px;
+}
+
+.kin-download-badge {
+    display: flex;
     justify-content: center;
+    width: 100%;
     transition: transform 200ms ease;
 }
 
-.kin-play-badge:hover {
+.kin-download-badge:hover {
     transform: translateY(-2px);
 }
 
-.kin-play-badge:hover {
-    transform: translateY(-2px);
-}
-
-.kin-play-badge-img {
-    height: 48px;
-    width: auto;
+.kin-download-badge-image {
+    width: min(260px, 100%);
+    height: auto;
     display: block;
-    clip-path: inset(16% 0 16% 0);
 }
 
-.kin-play-badge:hover {
-    transform: translateY(-2px);
-}
-
-.kin-play-badge-img {
-    height: 250px;
-    width: fit-content;
-    display: block;
+.kin-download-badge-image--google-play {
+    width: min(290px, 100%);
 }
 
 .kin-footer {
