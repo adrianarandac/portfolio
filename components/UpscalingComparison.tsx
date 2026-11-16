@@ -23,10 +23,10 @@ const UpscalingComparison = () => {
         <svg className="real-input" style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }} viewBox={example.input} preserveAspectRatio="xMidYMid slice" aria-hidden="true"><image href="/real/upscaling-comparison.jpg" width="1844" height="870" /></svg>
         <span className="real-image-label real-image-label--left">Input / bicubic</span>
         <span className="real-image-label real-image-label--right">Real-ESRGAN</span>
+        <figcaption className="real-image-attribution">Examples from the <a href="https://github.com/xinntao/Real-ESRGAN" target="_blank" rel="noreferrer">original Real-ESRGAN project</a>.</figcaption>
         <div className="real-image-divider" style={{ left: `${position}%` }} aria-hidden="true" />
         <input className="real-slider" id="real-comparison-range" aria-label="Compare input and Real-ESRGAN output" type="range" min={0} max={100} value={position} onChange={(event) => setPosition(Number(event.target.value))} aria-valuetext={`${position}% input visible`} />
       </div>
-      <figcaption>Examples from the <a href="https://github.com/xinntao/Real-ESRGAN" target="_blank" rel="noreferrer">original Real-ESRGAN project</a>, rather than outputs from my video pipeline.</figcaption>
     </figure>
   );
 };

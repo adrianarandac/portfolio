@@ -1609,7 +1609,7 @@ img {
     top: 0;
     z-index: 999;
     background: var(--page);
-    background: color-mix(in srgb, var(--page) 82%, white);
+    background: color-mix(in srgb, var(--page) 75%, rgba(0, 0, 0, 0.2));
     backdrop-filter: blur(16px);
 }
 
@@ -1818,6 +1818,8 @@ img {
 .real-slider::-moz-range-thumb { width: 0; height: 100%; border: 0; background: transparent; }
 .real-image-divider::after { content: "↔"; position: absolute; top: 50%; left: 50%; display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border: 2px solid #fff; border-radius: 50%; background: #0c0d11b3; color: #fff; font-size: 1.25rem; transform: translate(-50%, -50%); }
 .real-comparison figcaption { margin-top: 1rem; font-size: .7rem; line-height: 1.7; color: var(--muted); }
+.real-comparison .real-image-attribution { position: absolute; z-index: 2; left: .75rem; bottom: .75rem; max-width: calc(100% - 1.5rem); margin: 0; padding: .35rem .55rem; background: #0c0d11b3; color: #fff; font-size: .7rem; line-height: 1.5; }
+.real-image-attribution a { color: inherit; text-decoration: underline; text-underline-offset: .15em; }
 .real-page h2 { font-size: 1.4rem; font-weight: 500; line-height: 1.4; margin: 0 0 1.25rem; }
 .real-technical h2 { margin-top: 3rem; }
 .real-technical h2:first-child { margin-top: 0; }
