@@ -6,7 +6,7 @@ import ThemeToggle from "./ThemeToggle";
 const NAV_LINKS = [
   { href: "/engineering", label: "Engineering" },
   { href: "/kin", label: "KIN" },
-  { href: "/real", label: "VIDEN" },
+  { href: "/viden", label: "VIDEN" },
 ];
 
 const Navbar = () => {
