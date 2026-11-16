@@ -8,29 +8,33 @@ import adrian2 from "../public/adrian-profile.png";
 
 const experience = [
   {
-    role: "Backend Software Engineer",
+    role: "Senior AI Applied Software Engineer",
     company: "- Pleo",
-    timeframe: "Jun 2023 - Present | Barcelona",
+    timeframe: "Jul 2023 - Present | Barcelona · Remote",
     summary:
-      "Owning card-domain services in Java/Kotlin, evolving Terraform + Kubernetes stacks, and improving observability so finance teams get seamless, reliable tooling.",
+      "Working on agents and internal tools for engineering teams. Before that, I worked on card issuance and financial services in Java/Kotlin, and maintained their Terraform and Kubernetes infrastructure.",
   },
   {
-    role: "Fullstack Software Engineer",
+    role: "Backend Software Engineer",
     company: "- Glovo",
-    timeframe: "2022 - 2023 | Barcelona",
+    timeframe: "Sep 2022 - Jul 2023 | Barcelona",
     summary:
-      "Scaled courier-facing microservices, shipped event driven pipelines consuming 2.5M+ events/day, and paired with UX to design minimal operator panels in Vue.",
+      "Built JVM microservices supporting 60K+ couriers across 25 countries and event-driven pipelines processing 2.5M+ daily events with Kafka, PySpark, and Airflow. Collaborated across backend, data, and frontend teams, including Vue-based operator tools.",
   },
   {
     role: "Backend Software Engineer",
     company: "- Bolt",
-    timeframe: "2021 - 2022 | Remote (US)",
+    timeframe: "Dec 2021 - Sep 2022 | Barcelona",
     summary:
-      "Built crawlers and checkout simulators that ingested 400k+ products, and automated partner-store flows with headless scrappers for commerce embedded marketing.",
+      "Built ingestion systems processing 400K+ products from partner stores and Puppeteer automation for complex purchase and checkout flows. Owned pipeline monitoring, error handling, and adaptations to changing third-party sites.",
   },
 ];
 
 const skillClusters = [
+  {
+    title: "Applied AI",
+    items: ["Agents", "Model Context Protocol (MCP)", "Tool integration"],
+  },
   {
     title: "Systems",
     items: ["Java/Kotlin", "Spring", "FastAPI", "Kafka", "Airflow"],
@@ -40,7 +44,7 @@ const skillClusters = [
     title: "Infrastructure",
     items: ["AWS", "Terraform", "Kubernetes", "Docker", "Spinnaker"],
   },
-  { title: "Observability", items: ["Datadog", "Tracing", "Dashboards"] },
+  { title: "Observability", items: ["Grafana", "BigQuery", "incident.io", "Tracing"] },
   { title: "Interface", items: ["React", "Next.js", "Vue", "Tailwind"] },
   {
     title: "Practices",
@@ -52,48 +56,44 @@ const Engineering: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Adrian Aranda - Engineering</title>
+        <title>Adrian Aranda - Software Engineer</title>
         <meta
           name="description"
-          content="Engineering work, experience, and selected projects by Adrian Aranda."
-          key="Software engineer in Barcelona"
+          content="Adrián Aranda, software engineer at Pleo. Backend systems, internal tools, and recent work with AI agents and MCP."
+          key="description"
         />
-        <link rel="icon" href="/public/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className="layout stack-lg">
+      <main className="layout stack-lg engineering-page">
         <section className="section-block bio-grid">
           <div className="stack">
-            <p className="eyebrow">Hey there,</p>
-            <h1>I’m Adrián, a backend engineer at Pleo.</h1>
+            <h1>
+              I’m Adrián,
+              <br />
+              an AI applied engineer
+              <br />
+              at Pleo.
+            </h1>
             <p className="muted">
-              I'm a pragmatic engineer with a taste for concise UX. I've
-              partnered with teams at{" "}
-              <Link
-                href="https://www.bolt.com"
-                target="_blank"
-                rel="noreferrer"
-                className="link-underline accent"
-              >
-                Bolt
-              </Link>
-              ,{" "}
-              <Link
-                href="https://www.glovoapp.com"
-                target="_blank"
-                rel="noreferrer"
-                className="link-underline accent"
-              >
-                Glovo
-              </Link>
-              , and now <span className="accent">Pleo</span>, shipping JVM
-              services, payments, and tooling for product squads.
+              Most of my work has been in backend systems: Java, Kotlin, data
+              pipelines, and the infrastructure that keeps them running. Lately,
+              I’ve been building agents that help engineers investigate production
+              issues and tools that give them access to our internal systems.
             </p>
             <p className="muted">
-              Track record covers microservices, data pipelines,
-              infrastructure-as-code, and measured interfaces. <br />
-              When not coding, you'll find me swimming and recording music at my
-              home studio.
+              Currently at <span className="accent">Pleo</span>, previously at{" "}
+              <Link href="https://www.glovoapp.com" target="_blank" rel="noreferrer" className="link-underline accent">
+                Glovo
+              </Link>{" "}
+              and{" "}
+              <Link href="https://www.bolt.com" target="_blank" rel="noreferrer" className="link-underline accent">
+                Bolt
+              </Link>.
+            </p>
+            <p className="muted">
+              Outside work, I’m usually swimming or recording music
+              in my home studio (I’m originally a sound engineer!).
             </p>
           </div>
           <figure className="portrait-frame">
@@ -101,6 +101,27 @@ const Engineering: NextPage = () => {
               <Image alt="Adrian Aranda" src={adrian2} placeholder="blur" />
             </div>
           </figure>
+        </section>
+
+        <section className="section-block stack recent-work">
+          <h2>Life lately</h2>
+          <article className="stack">
+            <h3>Investigating production issues</h3>
+            <p className="muted">
+              I built an agent that investigates production issues by looking
+              through tickets, dashboards, data, source code, and recent deployments.
+              It brings together information from Linear, Grafana, BigQuery, and
+              incident.io, with over 80% diagnostic accuracy.
+            </p>
+          </article>
+          <article className="stack">
+            <h3>Connecting internal tools</h3>
+            <p className="muted">
+              I build MCP services so agents can use our internal systems and
+              workflows. That includes handling authentication, permissions, and
+              maintaining the services as those systems change.
+            </p>
+          </article>
         </section>
 
         <section className="section-block experience-grid">
@@ -126,14 +147,14 @@ const Engineering: NextPage = () => {
           </div>
         </section>
         <EngineeringProjectsSection
-          heading="Engineering projects"
+          heading="Earlier web projects"
           titleLevel="h3"
           compact
         />
 
-        <section className="section-block experience-grid">
+        <section className="section-block experience-grid capabilities-section">
           <div className="stack">
-            <h2>Stacks & Capabilities</h2>
+            <h2>Tools & capabilities</h2>
             {skillClusters.map((cluster) => (
               <div key={cluster.title} className="accent-row">
                 <span className="small-label">- {cluster.title}</span>
